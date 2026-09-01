@@ -1,0 +1,25 @@
+packages/react-native-enriched-markdown/ios/renderer/LinkRenderer.m
+  s_41508781eae449::t_f481ec69dc2b6c 103
+packages/react-native-enriched-markdown/ios/utils/PillBackground.m
+  s_41508781eae449::t_706a3d40382442 28-40,61,81-82,110
+packages/react-native-enriched-markdown/ios/utils/StylePropsUtils.h
+  s_41508781eae449::t_bbf9bf2b90705b 537
+packages/react-native-enriched-markdown/ios/utils/TextViewLayoutManager.mm
+  s_41508781eae449::t_d07936eea42b3e 6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "ec83f11636adb3ee43553adc2cf12f253f49a478",
+  "prompts": {},
+  "sessions": {
+    "s_41508781eae449": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "971cc024-56df-453d-93f8-4735c04e5be9",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
