@@ -1,0 +1,55 @@
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/renderer/LinkRenderer.kt
+  s_41508781eae449::t_7f075f4aeac328 5,7-8,30-45
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/BaselineShiftSpan.kt
+  s_41508781eae449::t_3db6e4f255058e 12
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/LinkSpan.kt
+  s_41508781eae449::t_6e3ca69f4b22d4 61-67
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/PillBackgroundSpan.kt
+  s_41508781eae449::t_bc221c93ef82a9 1-134
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/TrailingKernSpan.kt
+  s_41508781eae449::t_0caf0203e2375b 1-22
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/styles/LinkVariantEntry.kt
+  s_41508781eae449::t_2a7ed8e0fa42f9 4,11-14,21-27,29-36,47-53
+packages/react-native-enriched-markdown/ios/styles/StyleConfig.h
+  s_41508781eae449::t_54a581d0230880 16-25
+packages/react-native-enriched-markdown/ios/styles/StyleConfig.mm
+  s_41508781eae449::t_46c00a6024db07 22-35
+packages/react-native-enriched-markdown/ios/utils/PillBackground.h
+  s_41508781eae449::t_a3a11455b7a5d9 1-23
+packages/react-native-enriched-markdown/src/EnrichedMarkdownNativeComponent.ts
+  s_41508781eae449::t_25e169ed77d3f0 86-92
+packages/react-native-enriched-markdown/src/EnrichedMarkdownTextNativeComponent.ts
+  s_41508781eae449::t_59f13d6acff459 86-92
+packages/react-native-enriched-markdown/src/normalizeMarkdownStyle.ts
+  s_41508781eae449::t_95c3f7efc37e5a 339-347
+packages/react-native-enriched-markdown/src/normalizeMarkdownStyle.web.ts
+  s_41508781eae449::t_c4d208df5d102f 288-294
+packages/react-native-enriched-markdown/src/types/MarkdownStyle.ts
+  s_41508781eae449::t_24357689202155 98-113
+packages/react-native-enriched-markdown/src/types/MarkdownStyleInternal.ts
+  s_41508781eae449::t_aa58400f998a69 98-104
+packages/react-native-enriched-markdown/ios/renderer/LinkRenderer.m
+  s_41508781eae449::t_f69595cc850d24 2,4,79-107
+packages/react-native-enriched-markdown/ios/utils/PillBackground.m
+  s_41508781eae449::t_726b4c64a30093 1-127
+packages/react-native-enriched-markdown/ios/utils/StylePropsUtils.h
+  s_41508781eae449::t_91ffd2e074e3bc 533-539,554-561
+packages/react-native-enriched-markdown/ios/utils/TextViewLayoutManager.mm
+  s_41508781eae449::t_966b58f2bec86e 4,37-41
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "5e2835cf476eea7122c41bb8ebd52b3c4bd479e0",
+  "prompts": {},
+  "sessions": {
+    "s_41508781eae449": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "971cc024-56df-453d-93f8-4735c04e5be9",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
