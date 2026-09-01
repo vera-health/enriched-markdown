@@ -15,9 +15,9 @@ enum ListType: Int {
     case ordered = 1
 }
 
-struct BlockStyle {
-    var font: UIFont
-    var color: UIColor
+package struct BlockStyle {
+    package var font: UIFont
+    package var color: UIColor
     var headingLevel: Int
 }
 
@@ -42,7 +42,7 @@ enum MarkdownAttribute {
     static let taskListIndex = NSAttributedString.Key("EnrichedMarkdownTaskListIndex")
 }
 
-final class RenderContext {
+package final class RenderContext {
     private(set) var currentBlockType: BlockType = .none
     private(set) var currentBlockStyle: BlockStyle?
 
@@ -52,6 +52,9 @@ final class RenderContext {
     var listItemNumber = 0
     var taskItemIndex = 0
     var rendersBlockImage = false
+    /// True while rendering the synthetic paragraph around a bare root-level
+    /// plugin block node (see `MarkdownRenderPlugin.rootBlockNodeTypes`).
+    package var rendersPluginBlock = false
 
     private static let blockSpacerTemplate: NSParagraphStyle = {
         let style = NSMutableParagraphStyle()
@@ -69,6 +72,7 @@ final class RenderContext {
         listItemNumber = 0
         taskItemIndex = 0
         rendersBlockImage = false
+        rendersPluginBlock = false
     }
 
     func setBlockStyle(
@@ -86,11 +90,11 @@ final class RenderContext {
         currentBlockStyle = nil
     }
 
-    func getBlockStyle() -> BlockStyle? {
+    package func getBlockStyle() -> BlockStyle? {
         currentBlockStyle
     }
 
-    func getTextAttributes() -> [NSAttributedString.Key: Any] {
+    package func getTextAttributes() -> [NSAttributedString.Key: Any] {
         guard let blockStyle = currentBlockStyle else {
             return [:]
         }
