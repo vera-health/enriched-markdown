@@ -1,0 +1,23 @@
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/renderer/LinkRenderer.kt
+  s_4f2b7b3619bb33::t_3c6df70fd18323 34,36
+packages/react-native-enriched-markdown/ios/renderer/LinkRenderer.m
+  s_4f2b7b3619bb33::t_e9fdd93a36180e 80-81
+packages/react-native-enriched-markdown/ios/utils/StylePropsUtils.h
+  s_4f2b7b3619bb33::t_60c47c7e3b7702 537
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "970d8285b3e2ecbdd1e4e1b2c896f5bb2c29566a",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
