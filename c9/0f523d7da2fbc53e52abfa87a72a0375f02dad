@@ -1,0 +1,14 @@
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/PillBackgroundSpan.kt
+  h_3442208eeaa832 95-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c90f523d7da2fbc53e52abfa87a72a0375f02dad",
+  "prompts": {},
+  "humans": {
+    "h_3442208eeaa832": {
+      "author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
