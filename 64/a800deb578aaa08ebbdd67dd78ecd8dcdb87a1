@@ -1,0 +1,36 @@
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/BaselineShiftSpan.kt
+  s_4f2b7b3619bb33::t_caeb79d4318bbc 3,23-26,29-31,34-36,38-40,47-64
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/PillBackgroundSpan.kt
+  s_4f2b7b3619bb33::t_d61176ca1da521 22-29
+  s_4f2b7b3619bb33::t_f5040d03642c86 81-83,85-86,89,91
+packages/react-native-enriched-markdown/ios/views/TableContainerView.m
+  s_4f2b7b3619bb33::t_b1adf86e2030cf 94-98
+  s_4f2b7b3619bb33::t_5fcd2ac3c6bf68 272-273
+packages/react-native-enriched-markdown/ios/renderer/LinkRenderer.m
+  s_4f2b7b3619bb33::t_5b1cf7a95b55a6 102-104,111
+  s_4f2b7b3619bb33::t_03de9f3931df48 18-19
+packages/react-native-enriched-markdown/ios/utils/ParagraphStyleUtils.m
+  s_4f2b7b3619bb33::t_004599fd1743e4 374-381
+  s_4f2b7b3619bb33::t_d3425849baab67 5
+packages/react-native-enriched-markdown/ios/utils/PillBackground.m
+  s_4f2b7b3619bb33::t_4e82134d92e659 61-66,68-73
+  s_4f2b7b3619bb33::t_4d96b34793d688 90-93,97-99
+  s_4f2b7b3619bb33::t_dc02723b393d77 89
+  s_4f2b7b3619bb33::t_d06392c1eaac74 101
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "64a800deb578aaa08ebbdd67dd78ecd8dcdb87a1",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
