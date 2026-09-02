@@ -1,0 +1,67 @@
+ios/vendor/.stamp
+  s_4f2b7b3619bb33::t_89f08cd4d8f8ab 1
+ios/vendor/DisplayList.swift
+  s_4f2b7b3619bb33::t_a853fe8f7aec7e 1-204
+ios/vendor/LICENSE
+  s_4f2b7b3619bb33::t_948c099d35ff44 1-27
+ios/vendor/RaTeX.xcframework/Info.plist
+  s_4f2b7b3619bb33::t_e526787c0365e7 1-65
+ios/vendor/RaTeX.xcframework/ios-arm64/Headers/module.modulemap
+  s_4f2b7b3619bb33::t_d86e77f9eedee6 1-4
+ios/vendor/RaTeX.xcframework/ios-arm64/Headers/ratex.h
+  s_4f2b7b3619bb33::t_3476db2ebc1a1e 1-133
+ios/vendor/RaTeX.xcframework/ios-arm64_x86_64-simulator/Headers/module.modulemap
+  s_4f2b7b3619bb33::t_6040f2491426db 1-4
+ios/vendor/RaTeX.xcframework/ios-arm64_x86_64-simulator/Headers/ratex.h
+  s_4f2b7b3619bb33::t_3213fda4421da4 1-133
+ios/vendor/RaTeX.xcframework/macos-arm64_x86_64/Headers/module.modulemap
+  s_4f2b7b3619bb33::t_bb1b898d24ba39 1-4
+ios/vendor/RaTeX.xcframework/macos-arm64_x86_64/Headers/ratex.h
+  s_4f2b7b3619bb33::t_4f33061c5274df 1-133
+ios/vendor/RaTeXEngine.swift
+  s_4f2b7b3619bb33::t_f0c583af89f786 1-35,37-68,70,72,74-76,78-84,86-200
+ios/vendor/RaTeXFontLoader.swift
+  s_4f2b7b3619bb33::t_0b91e3813ef358 1-179
+ios/vendor/RaTeXRenderer.swift
+  s_4f2b7b3619bb33::t_9d136e7ddb696a 1-176
+lib/module/normalizeMarkdownStyle.js
+  s_4f2b7b3619bb33::t_c024a5e2075ecc 364
+lib/module/normalizeMarkdownStyle.js.map
+  s_4f2b7b3619bb33::t_4f6b07e3918575 1
+lib/module/normalizeMarkdownStyle.web.js
+  s_4f2b7b3619bb33::t_137b7a275520ca 274
+lib/module/normalizeMarkdownStyle.web.js.map
+  s_4f2b7b3619bb33::t_8443aa100f9ce8 1
+lib/typescript/src/EnrichedMarkdownNativeComponent.d.ts.map
+  s_4f2b7b3619bb33::t_b6d3e6e0acb239 1
+lib/typescript/src/EnrichedMarkdownTextNativeComponent.d.ts.map
+  s_4f2b7b3619bb33::t_7259828a358f27 1
+lib/typescript/src/normalizeMarkdownStyle.d.ts.map
+  s_4f2b7b3619bb33::t_eefae65c82cab7 1
+lib/typescript/src/normalizeMarkdownStyle.web.d.ts.map
+  s_4f2b7b3619bb33::t_fe29bcbb59eb65 1
+lib/typescript/src/types/MarkdownStyle.d.ts
+  s_4f2b7b3619bb33::t_7103ae46a20338 102
+lib/typescript/src/types/MarkdownStyle.d.ts.map
+  s_4f2b7b3619bb33::t_85b3803ff2cf3e 1
+lib/typescript/src/types/MarkdownStyleInternal.d.ts.map
+  s_4f2b7b3619bb33::t_87f15c866501d7 1
+package.json
+  s_4f2b7b3619bb33::t_3cb4ab0fd7cc1f 50,176
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "045f22824b65716afa92a2e6d881b7c51e825ccb",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
