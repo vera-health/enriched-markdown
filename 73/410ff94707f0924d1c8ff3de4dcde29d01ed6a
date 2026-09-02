@@ -1,0 +1,57 @@
+android/src/main/java/com/swmansion/enriched/markdown/renderer/LinkRenderer.kt
+  s_4f2b7b3619bb33::t_b676fcd4df6afe 34,36
+ios/renderer/LinkRenderer.m
+  s_4f2b7b3619bb33::t_e34df3ba792e7c 80-81
+ios/utils/StylePropsUtils.h
+  s_4f2b7b3619bb33::t_67a96aea540e34 537
+ios/vendor/.stamp
+  s_41508781eae449::t_c35b4b2450f98a 1
+ios/vendor/DisplayList.swift
+  s_41508781eae449::t_f3d6439ac06148 1-204
+ios/vendor/LICENSE
+  s_41508781eae449::t_b5c127e653b8e3 1-27
+ios/vendor/RaTeX.xcframework/Info.plist
+  s_4f2b7b3619bb33::t_ad0bc96ac64feb 1-65
+ios/vendor/RaTeX.xcframework/ios-arm64/Headers/module.modulemap
+  s_4f2b7b3619bb33::t_215694d2388120 1-4
+ios/vendor/RaTeX.xcframework/ios-arm64/Headers/ratex.h
+  s_4f2b7b3619bb33::t_ddba0b5da6a237 1-133
+ios/vendor/RaTeX.xcframework/ios-arm64_x86_64-simulator/Headers/module.modulemap
+  s_4f2b7b3619bb33::t_edd2d73dd19204 1-4
+ios/vendor/RaTeX.xcframework/ios-arm64_x86_64-simulator/Headers/ratex.h
+  s_4f2b7b3619bb33::t_f61ff3ea35519d 1-133
+ios/vendor/RaTeX.xcframework/macos-arm64_x86_64/Headers/module.modulemap
+  s_4f2b7b3619bb33::t_af92d427801dd9 1-4
+ios/vendor/RaTeX.xcframework/macos-arm64_x86_64/Headers/ratex.h
+  s_4f2b7b3619bb33::t_88572ae2a4955e 1-133
+ios/vendor/RaTeXEngine.swift
+  s_41508781eae449::t_6bd7a05788f962 1-201
+ios/vendor/RaTeXFontLoader.swift
+  s_41508781eae449::t_55c5a952a9c8c2 1-180
+ios/vendor/RaTeXRenderer.swift
+  s_41508781eae449::t_193cbeb5543515 1-176
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "73410ff94707f0924d1c8ff3de4dcde29d01ed6a",
+  "prompts": {},
+  "sessions": {
+    "s_41508781eae449": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "971cc024-56df-453d-93f8-4735c04e5be9",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    },
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
