@@ -1,0 +1,19 @@
+ios/utils/PillBackground.m
+  s_4f2b7b3619bb33::t_21a82a5da2140d 109-129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "c3d0eacef00a61445b189772a7d0f4663eea9ec4",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
