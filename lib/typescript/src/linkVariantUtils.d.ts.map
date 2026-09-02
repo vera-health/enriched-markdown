@@ -1,0 +1,1 @@
+{"version":3,"file":"linkVariantUtils.d.ts","sourceRoot":"","sources":["../../../src/linkVariantUtils.ts"],"names":[],"mappings":"AAAA,OAAO,KAAK,EAAE,gBAAgB,EAAE,MAAM,uBAAuB,CAAC;AAE9D,KAAK,gBAAgB,GAAG,CAAC,OAAO,EAAE,MAAM,EAAE,KAAK,EAAE,gBAAgB,CAAC,CAAC;AAiBnE,wBAAgB,2BAA2B,CACzC,YAAY,CAAC,EAAE,MAAM,CAAC,MAAM,EAAE,gBAAgB,CAAC,GAC9C,gBAAgB,EAAE,CAoBpB"}

@@ -1,0 +1,437 @@
+#import "ParagraphStyleUtils.h"
+#import "ENRMFeatureFlags.h"
+#import "ENRMImageAttachment.h"
+#import "LastElementUtils.h"
+#import "PillBackground.h"
+#import <React/RCTI18nUtil.h>
+
+#if ENRICHED_MARKDOWN_MATH
+#import "ENRMMathInlineAttachment.h"
+#endif
+
+NSAttributedString *kNewlineAttributedString;
+static NSParagraphStyle *kBlockSpacerTemplate;
+
+NSLineBreakStrategy ENRMResolveLineBreakStrategy(NSString *strategy)
+{
+  if ([strategy isEqualToString:@"standard"]) {
+    return NSLineBreakStrategyStandard;
+  } else if ([strategy isEqualToString:@"hangul-word"]) {
+    return NSLineBreakStrategyHangulWordPriority;
+  } else if ([strategy isEqualToString:@"push-out"]) {
+    return NSLineBreakStrategyPushOut;
+  }
+  return NSLineBreakStrategyNone;
+}
+
+__attribute__((constructor)) static void initParagraphStyleUtils(void)
+{
+  kNewlineAttributedString = [[NSAttributedString alloc] initWithString:@"\n"];
+
+  NSMutableParagraphStyle *template = [[NSMutableParagraphStyle alloc] init];
+  template.minimumLineHeight = 1;
+  template.maximumLineHeight = 1;
+  kBlockSpacerTemplate = [template copy];
+}
+
+ENRMWritingDirectionMode ENRMResolveWritingDirectionMode(NSString *value)
+{
+  if ([value isEqualToString:@"ltr"]) {
+    return ENRMWritingDirectionModeLTR;
+  }
+  if ([value isEqualToString:@"rtl"]) {
+    return ENRMWritingDirectionModeRTL;
+  }
+  if ([value isEqualToString:@"auto"]) {
+    return ENRMWritingDirectionModeAuto;
+  }
+  return ENRMWritingDirectionModeFirstStrong;
+}
+
+static BOOL ENRMIsStrongRTLChar(unichar c)
+{
+  return (c >= 0x0590 && c <= 0x08FF) || (c >= 0xFB1D && c <= 0xFDFF) || (c >= 0xFE70 && c <= 0xFEFF);
+}
+
+NSWritingDirection ENRMFirstStrongDirection(NSString *text)
+{
+  NSCharacterSet *letters = [NSCharacterSet letterCharacterSet];
+  NSUInteger length = text.length;
+  for (NSUInteger i = 0; i < length; i++) {
+    unichar c = [text characterAtIndex:i];
+    if (![letters characterIsMember:c]) {
+      continue;
+    }
+    return ENRMIsStrongRTLChar(c) ? NSWritingDirectionRightToLeft : NSWritingDirectionLeftToRight;
+  }
+  return NSWritingDirectionNatural;
+}
+
+BOOL ENRMParagraphIsRTL(NSParagraphStyle *style)
+{
+  if (style && style.baseWritingDirection != NSWritingDirectionNatural) {
+    return style.baseWritingDirection == NSWritingDirectionRightToLeft;
+  }
+  return [[RCTI18nUtil sharedInstance] isRTL];
+}
+
+void ENRMApplyWritingDirectionMode(NSMutableAttributedString *output, ENRMWritingDirectionMode mode,
+                                   NSWritingDirection layoutDirection)
+{
+  switch (mode) {
+    case ENRMWritingDirectionModeAuto:
+      ENRMApplyWritingDirectionToParagraphStyles(output, NSWritingDirectionNatural);
+      break;
+    case ENRMWritingDirectionModeLTR:
+      ENRMApplyWritingDirectionToParagraphStyles(output, NSWritingDirectionLeftToRight);
+      break;
+    case ENRMWritingDirectionModeRTL:
+      ENRMApplyWritingDirectionToParagraphStyles(output, NSWritingDirectionRightToLeft);
+      break;
+    case ENRMWritingDirectionModeFirstStrong:
+      ENRMApplyFirstStrongParagraphDirections(output, layoutDirection);
+      break;
+  }
+}
+
+void ENRMApplyFirstStrongParagraphDirections(NSMutableAttributedString *output, NSWritingDirection fallback)
+{
+  if (output.length == 0) {
+    return;
+  }
+  NSString *string = output.string;
+  NSUInteger length = string.length;
+  NSUInteger position = 0;
+  while (position < length) {
+    NSRange paragraphRange = [string paragraphRangeForRange:NSMakeRange(position, 0)];
+    if (NSMaxRange(paragraphRange) <= position) {
+      break;
+    }
+    position = NSMaxRange(paragraphRange);
+
+    NSNumber *isCodeBlock = [output attribute:CodeBlockAttributeName
+                                      atIndex:paragraphRange.location
+                               effectiveRange:nil];
+    if (isCodeBlock.boolValue) {
+      continue;
+    }
+
+    NSWritingDirection direction = ENRMFirstStrongDirection([string substringWithRange:paragraphRange]);
+    if (direction == NSWritingDirectionNatural) {
+      direction = fallback;
+    }
+    if (direction == NSWritingDirectionNatural) {
+      continue;
+    }
+
+    [output enumerateAttribute:NSParagraphStyleAttributeName
+                       inRange:paragraphRange
+                       options:0
+                    usingBlock:^(NSParagraphStyle *style, NSRange range, BOOL *stop) {
+                      if (style != nil && style.baseWritingDirection == direction) {
+                        return;
+                      }
+                      NSMutableParagraphStyle *updated =
+                          style ? [style mutableCopy] : [[NSMutableParagraphStyle alloc] init];
+                      updated.baseWritingDirection = direction;
+                      [output addAttribute:NSParagraphStyleAttributeName value:updated range:range];
+                    }];
+  }
+}
+
+void ENRMApplyWritingDirectionToParagraphStyles(NSMutableAttributedString *output, NSWritingDirection writingDirection)
+{
+  if (output.length == 0) {
+    return;
+  }
+  [output enumerateAttribute:NSParagraphStyleAttributeName
+                     inRange:NSMakeRange(0, output.length)
+                     options:0
+                  usingBlock:^(NSParagraphStyle *style, NSRange range, BOOL *stop) {
+                    if (!style) {
+                      return;
+                    }
+                    NSNumber *isCodeBlock = [output attribute:CodeBlockAttributeName
+                                                      atIndex:range.location
+                                               effectiveRange:nil];
+                    if (isCodeBlock.boolValue) {
+                      return;
+                    }
+                    NSMutableParagraphStyle *mutable = [style mutableCopy];
+                    mutable.baseWritingDirection = writingDirection;
+                    [output addAttribute:NSParagraphStyleAttributeName value:mutable range:range];
+                  }];
+}
+
+NSMutableParagraphStyle *getOrCreateParagraphStyle(NSMutableAttributedString *output, NSUInteger index)
+{
+  NSParagraphStyle *existing = [output attribute:NSParagraphStyleAttributeName atIndex:index effectiveRange:NULL];
+  NSMutableParagraphStyle *style = existing ? [existing mutableCopy] : [[NSMutableParagraphStyle alloc] init];
+  return style;
+}
+
+void applyParagraphSpacingAfter(NSMutableAttributedString *output, NSUInteger start, CGFloat marginBottom)
+{
+  [output appendAttributedString:kNewlineAttributedString];
+
+  NSMutableParagraphStyle *style = getOrCreateParagraphStyle(output, start);
+  style.paragraphSpacing = marginBottom;
+
+  NSRange range = NSMakeRange(start, output.length - start);
+  [output addAttribute:NSParagraphStyleAttributeName value:style range:range];
+}
+
+NSUInteger applyParagraphSpacingBefore(NSMutableAttributedString *output, NSRange range, CGFloat marginTop)
+{
+  if (marginTop <= 0 || range.location == 0)
+    return 0;
+
+  NSUInteger prevIdx = range.location - 1;
+  if ([output.string characterAtIndex:prevIdx] != '\n')
+    return 0;
+
+  NSParagraphStyle *prevStyle = [output attribute:NSParagraphStyleAttributeName atIndex:prevIdx effectiveRange:NULL];
+
+  CGFloat prevMarginBottom = prevStyle.paragraphSpacing;
+  if (prevMarginBottom >= marginTop)
+    return 0;
+
+  CGFloat extraGap = marginTop - prevMarginBottom;
+
+  NSMutableParagraphStyle *spacerStyle = [kBlockSpacerTemplate mutableCopy];
+  spacerStyle.paragraphSpacing = MAX(0, extraGap - 1.0);
+
+  NSDictionary *attrs = @{NSParagraphStyleAttributeName : spacerStyle};
+  NSAttributedString *spacer = [[NSAttributedString alloc] initWithString:@"\n" attributes:attrs];
+
+  [output insertAttributedString:spacer atIndex:range.location];
+  return 1;
+}
+
+NSUInteger applyBlockSpacingBefore(NSMutableAttributedString *output, NSUInteger insertionPoint, CGFloat marginTop)
+{
+  if (marginTop <= 0) {
+    return 0;
+  }
+
+  CGFloat spacing = marginTop;
+
+  // At index 0 the spacer \n produces a 1pt line fragment (minimumLineHeight=1)
+  // on top of paragraphSpacing. Subtract it so the total equals the desired margin.
+  // For non-zero positions the 1pt is intentional inter-block spacing.
+  if (insertionPoint == 0) {
+    spacing = MAX(0, marginTop - 1.0);
+  }
+
+  NSMutableParagraphStyle *spacerStyle = [kBlockSpacerTemplate mutableCopy];
+  spacerStyle.paragraphSpacing = spacing;
+
+  NSAttributedString *spacer =
+      [[NSAttributedString alloc] initWithString:@"\n" attributes:@{NSParagraphStyleAttributeName : spacerStyle}];
+
+  [output insertAttributedString:spacer atIndex:insertionPoint];
+  return 1;
+}
+
+void applyBlockSpacingAfter(NSMutableAttributedString *output, CGFloat marginBottom)
+{
+  if (marginBottom <= 0) {
+    return;
+  }
+
+  NSUInteger spacerLocation = output.length;
+  [output appendAttributedString:kNewlineAttributedString];
+
+  NSMutableParagraphStyle *spacerStyle = [kBlockSpacerTemplate mutableCopy];
+  spacerStyle.paragraphSpacing = marginBottom;
+
+  [output addAttribute:NSParagraphStyleAttributeName value:spacerStyle range:NSMakeRange(spacerLocation, 1)];
+}
+
+BOOL ENRMRangeContainsBlockImage(NSAttributedString *output, NSRange range)
+{
+  __block BOOL found = NO;
+  [output enumerateAttribute:NSAttachmentAttributeName
+                     inRange:range
+                     options:0
+                  usingBlock:^(id value, __unused NSRange attrRange, BOOL *stop) {
+                    if ([value isKindOfClass:[ENRMImageAttachment class]] && !((ENRMImageAttachment *)value).isInline) {
+                      found = YES;
+                      *stop = YES;
+                    }
+                  }];
+  return found;
+}
+
+void applyLineHeight(NSMutableAttributedString *output, NSRange range, CGFloat lineHeight)
+{
+  if (lineHeight <= 0) {
+    return;
+  }
+
+  __block BOOL hasMath = NO;
+
+#if ENRICHED_MARKDOWN_MATH
+  [output enumerateAttribute:NSAttachmentAttributeName
+                     inRange:range
+                     options:0
+                  usingBlock:^(id value, __unused NSRange attrRange, BOOL *stop) {
+                    if ([value isKindOfClass:[ENRMMathInlineAttachment class]]) {
+                      hasMath = YES;
+                      *stop = YES;
+                    }
+                  }];
+#endif
+
+  BOOL hasBlockImage = ENRMRangeContainsBlockImage(output, range);
+
+  NSMutableParagraphStyle *style = getOrCreateParagraphStyle(output, range.location);
+
+  style.minimumLineHeight = lineHeight;
+  style.maximumLineHeight = (hasMath || hasBlockImage) ? 0 : lineHeight;
+
+  [output addAttribute:NSParagraphStyleAttributeName value:style range:range];
+}
+
+// TODO: Extend baseline offset to every block that calls applyLineHeight (headings, blockquotes,
+// code blocks, list items). Keep per-block range scoping — not a whole-document pass like RN Text,
+// since blocks can use different line heights. Optionally consolidate into a single post-pass in
+// AttributedRenderer; evaluate RN's per-line mode (enableIOSTextBaselineOffsetPerLine) if needed.
+void applyBaselineOffset(NSMutableAttributedString *output, NSRange range)
+{
+  if (range.length == 0) {
+    return;
+  }
+
+  // Math paragraphs leave maximumLineHeight at 0, so fall back to minimumLineHeight.
+  __block CGFloat targetLineHeight = 0;
+  [output enumerateAttribute:NSParagraphStyleAttributeName
+                     inRange:range
+                     options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired
+                  usingBlock:^(NSParagraphStyle *paragraphStyle, __unused NSRange subrange, __unused BOOL *stop) {
+                    if (!paragraphStyle) {
+                      return;
+                    }
+                    CGFloat clamp = MAX(paragraphStyle.maximumLineHeight, paragraphStyle.minimumLineHeight);
+                    targetLineHeight = MAX(clamp, targetLineHeight);
+                  }];
+
+  if (targetLineHeight <= 0) {
+    return;
+  }
+
+  // Center on real text; on a math-only line center the math box instead of its font.
+  __block CGFloat textLineHeight = 0;
+#if ENRICHED_MARKDOWN_MATH
+  __block BOOL hasMath = NO;
+#endif
+  [output enumerateAttributesInRange:range
+                             options:0
+                          usingBlock:^(NSDictionary<NSAttributedStringKey, id> *attrs, __unused NSRange subrange,
+                                       __unused BOOL *stop) {
+#if ENRICHED_MARKDOWN_MATH
+                            if ([attrs[NSAttachmentAttributeName] isKindOfClass:[ENRMMathInlineAttachment class]]) {
+                              hasMath = YES;
+                              return;
+                            }
+#endif
+                            UIFont *font = attrs[NSFontAttributeName];
+                            if (font) {
+                              textLineHeight = MAX(UIFontLineHeight(font), textLineHeight);
+                            }
+                          }];
+
+  CGFloat contentLineHeight = textLineHeight;
+
+#if ENRICHED_MARKDOWN_MATH
+  // Math only grows the content height, so measure it (parsing LaTeX) only when text
+  // alone wouldn't already fill the line.
+  if (hasMath && targetLineHeight > textLineHeight) {
+    __block CGFloat mathBoxHeight = 0;
+    [output enumerateAttribute:NSAttachmentAttributeName
+                       inRange:range
+                       options:0
+                    usingBlock:^(id value, __unused NSRange subrange, __unused BOOL *stop) {
+                      if ([value isKindOfClass:[ENRMMathInlineAttachment class]]) {
+                        mathBoxHeight = MAX(((ENRMMathInlineAttachment *)value).boxHeight, mathBoxHeight);
+                      }
+                    }];
+    contentLineHeight = MAX(textLineHeight, mathBoxHeight);
+  }
+#endif
+
+  if (contentLineHeight <= 0 || targetLineHeight <= contentLineHeight) {
+    return;
+  }
+
+  CGFloat baseLineOffset = (targetLineHeight - contentLineHeight) / 2.0;
+
+  [output enumerateAttribute:NSBaselineOffsetAttributeName
+                     inRange:range
+                     options:0
+                  usingBlock:^(NSNumber *existingOffset, NSRange subrange, BOOL *stop) {
+                    if (existingOffset != nil) {
+                      // A chip label's existing offset is its centering lift,
+                      // not a superscript: it must ride up with the paragraph
+                      // like the pads and the pill do, so compose the two.
+                      if ([output attribute:ENRMPillAttributeName atIndex:subrange.location effectiveRange:NULL]) {
+                        [output addAttribute:NSBaselineOffsetAttributeName
+                                       value:@(existingOffset.doubleValue + baseLineOffset)
+                                       range:subrange];
+                      }
+                      return;
+                    }
+                    [output enumerateAttribute:NSAttachmentAttributeName
+                                       inRange:subrange
+                                       options:0
+                                    usingBlock:^(id attachment, NSRange attachmentRange, BOOL *innerStop) {
+                                      if ([attachment isKindOfClass:[ENRMImageAttachment class]] &&
+                                          !((ENRMImageAttachment *)attachment).isInline) {
+                                        return;
+                                      }
+                                      [output addAttribute:NSBaselineOffsetAttributeName
+                                                     value:@(baseLineOffset)
+                                                     range:attachmentRange];
+                                    }];
+                  }];
+}
+
+void applyTextAlignment(NSMutableAttributedString *output, NSRange range, NSTextAlignment textAlign)
+{
+  NSMutableParagraphStyle *style = getOrCreateParagraphStyle(output, range.location);
+  style.alignment = textAlign;
+  [output addAttribute:NSParagraphStyleAttributeName value:style range:range];
+}
+
+void ENRMApplyLineBreakStrategyToParagraphStyles(NSMutableAttributedString *output,
+                                                 NSLineBreakStrategy lineBreakStrategy)
+{
+  if (output.length == 0) {
+    return;
+  }
+  [output enumerateAttribute:NSParagraphStyleAttributeName
+                     inRange:NSMakeRange(0, output.length)
+                     options:0
+                  usingBlock:^(NSParagraphStyle *value, NSRange range, BOOL *stop) {
+                    if (!value) {
+                      return;
+                    }
+                    NSMutableParagraphStyle *mutable = [value mutableCopy];
+                    mutable.lineBreakStrategy = lineBreakStrategy;
+                    [output addAttribute:NSParagraphStyleAttributeName value:mutable range:range];
+                  }];
+}
+
+NSTextAlignment textAlignmentFromString(NSString *textAlign)
+{
+  if ([textAlign isEqualToString:@"left"]) {
+    return NSTextAlignmentLeft;
+  } else if ([textAlign isEqualToString:@"center"]) {
+    return NSTextAlignmentCenter;
+  } else if ([textAlign isEqualToString:@"right"]) {
+    return NSTextAlignmentRight;
+  } else if ([textAlign isEqualToString:@"justify"]) {
+    return NSTextAlignmentJustified;
+  }
+  return NSTextAlignmentNatural;
+}
