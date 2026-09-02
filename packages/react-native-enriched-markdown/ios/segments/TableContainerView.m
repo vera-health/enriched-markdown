@@ -88,6 +88,11 @@ static NSMutableAttributedString *ENRMTableRenderCellNode(MarkdownASTNode *cellN
   [context applyLinkAttributesToString:attributedText];
 
   ENRMPinLineMetricsToStyledFonts(attributedText, NSMakeRange(0, attributedText.length));
+  // Cells draw via NSStringDrawing, which paints NSLink ranges in the system
+  // link color over the variant's foreground color. The grid hit-tests the
+  // custom linkURL attribute, so NSLink is dead weight here.
+  [attributedText removeAttribute:NSLinkAttributeName range:NSMakeRange(0, attributedText.length)];
+
   ENRMApplyWritingDirectionMode(attributedText, writingDirectionMode, resolvedLayoutDirection);
 
   if (alignment != NSTextAlignmentLeft && attributedText.length > 0) {

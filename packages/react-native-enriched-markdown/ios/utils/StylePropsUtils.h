@@ -561,7 +561,11 @@ BOOL applyMarkdownStyleToConfig(StyleConfig *config, const MarkdownStyle &newSty
         const auto &oldVariant = oldStyle.linkVariants[i];
         if (newVariant.pattern != oldVariant.pattern || newVariant.color != oldVariant.color ||
             newVariant.underline != oldVariant.underline || newVariant.backgroundColor != oldVariant.backgroundColor ||
-            newVariant.fontFamily != oldVariant.fontFamily) {
+            newVariant.fontFamily != oldVariant.fontFamily ||
+            newVariant.borderColor != oldVariant.borderColor || newVariant.borderWidth != oldVariant.borderWidth ||
+            newVariant.borderRadius != oldVariant.borderRadius ||
+            newVariant.paddingHorizontal != oldVariant.paddingHorizontal ||
+            newVariant.paddingVertical != oldVariant.paddingVertical || newVariant.fontScale != oldVariant.fontScale) {
           linkVariantsChanged = YES;
           break;
         }
@@ -577,6 +581,13 @@ BOOL applyMarkdownStyleToConfig(StyleConfig *config, const MarkdownStyle &newSty
         variant.fontFamily = [[NSString alloc] initWithUTF8String:entry.fontFamily.c_str()];
         RCTUIColor *backgroundColor = RCTUIColorFromSharedColor(entry.backgroundColor);
         variant.backgroundColor = CGColorGetAlpha(backgroundColor.CGColor) > 0 ? backgroundColor : nil;
+        RCTUIColor *borderColor = RCTUIColorFromSharedColor(entry.borderColor);
+        variant.borderColor = CGColorGetAlpha(borderColor.CGColor) > 0 ? borderColor : nil;
+        variant.borderWidth = entry.borderWidth;
+        variant.borderRadius = entry.borderRadius;
+        variant.paddingHorizontal = entry.paddingHorizontal;
+        variant.paddingVertical = entry.paddingVertical;
+        variant.fontScale = entry.fontScale > 0 ? entry.fontScale : 1.0;
         [variants addObject:variant];
       }
       [config setLinkVariants:variants];

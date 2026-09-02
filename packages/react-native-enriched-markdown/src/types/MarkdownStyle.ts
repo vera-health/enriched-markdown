@@ -122,11 +122,23 @@ export interface LinkStyle {
   backgroundColor?: string;
 }
 
-/**
- * Per-variant link override. Structurally identical to {@link LinkStyle}:
- * every field is optional and inherits from the base `link` style when omitted.
- */
-export type LinkVariantStyle = LinkStyle;
+export interface LinkVariantStyle extends LinkStyle {
+  /**
+   * Chip geometry. When any of these is set the variant renders as an inline
+   * pill: a rounded, optionally bordered background sized to the text's cap
+   * height rather than a plain full-line background highlight. All default to
+   * 0 (off), so a variant that sets only colors renders exactly as before.
+   */
+  borderColor?: string;
+  borderWidth?: number;
+  /** Clamped to half the pill height, so any large value yields a capsule. */
+  borderRadius?: number;
+  paddingHorizontal?: number;
+  paddingVertical?: number;
+  /** Label size relative to the surrounding text. 1 inherits. */
+  fontScale?: number;
+  /** Baseline shift relative to the font size; positive lifts the label. */
+}
 
 interface StrongStyle {
   fontFamily?: string;

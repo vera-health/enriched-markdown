@@ -10,6 +10,7 @@ import com.swmansion.enriched.markdown.spans.ListMarkerAnchorSpan
 import com.swmansion.enriched.markdown.spans.OrderedListSpan
 import com.swmansion.enriched.markdown.spans.TaskListSpan
 import com.swmansion.enriched.markdown.spans.UnorderedListSpan
+import com.swmansion.enriched.markdown.utils.text.span.SPAN_FLAGS_CONTAINER_BACKGROUND
 import com.swmansion.enriched.markdown.utils.text.span.SPAN_FLAGS_EXCLUSIVE_EXCLUSIVE
 
 class ListItemRenderer(
@@ -109,18 +110,21 @@ class ListItemRenderer(
           if (isFirstSegment && plainAnchor) markerSpan else makeSpan(drawsMarker = false),
           pos,
           cbStart,
-          SPAN_FLAGS_EXCLUSIVE_EXCLUSIVE,
+          SPAN_FLAGS_CONTAINER_BACKGROUND,
         )
         isFirstSegment = false
       }
       pos = maxOf(pos, cbEnd)
     }
+    // Container font reset applies before inline styles (chip labels, inline
+    // code) so they keep their own sizes — same priority rule the container
+    // backgrounds use.
     if (pos < itemEnd) {
       builder.setSpan(
         if (isFirstSegment && plainAnchor) markerSpan else makeSpan(drawsMarker = false),
         pos,
         itemEnd,
-        SPAN_FLAGS_EXCLUSIVE_EXCLUSIVE,
+        SPAN_FLAGS_CONTAINER_BACKGROUND,
       )
     }
 
