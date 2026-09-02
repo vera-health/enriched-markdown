@@ -1,0 +1,33 @@
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/renderer/LinkRenderer.kt
+  s_4f2b7b3619bb33::t_231468dcb35ba1 35-39,48-72
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/renderer/ListItemRenderer.kt
+  s_4f2b7b3619bb33::t_143651f1b0b6ff 13,113,119-121,127
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/LinkSpan.kt
+  s_4f2b7b3619bb33::t_1f9e54fdda6535 48-54
+packages/react-native-enriched-markdown/ios/utils/TextViewLayoutManager.mm
+  s_4f2b7b3619bb33::t_0d383e272b5405 35-40
+packages/react-native-enriched-markdown/ios/views/ENRMTableIOSGridView.m
+  s_4f2b7b3619bb33::t_d759b2c25e15c1 2,9-12,105-108,120-154
+packages/react-native-enriched-markdown/android/src/main/java/com/swmansion/enriched/markdown/spans/BaselineShiftSpan.kt
+  s_4f2b7b3619bb33::t_32651db28835a8 22-27,29-32
+packages/react-native-enriched-markdown/ios/renderer/LinkRenderer.m
+  s_4f2b7b3619bb33::t_50fd1e420ede36 10-30,102-116
+packages/react-native-enriched-markdown/ios/utils/PillBackground.m
+  s_4f2b7b3619bb33::t_f04515b5fa72be 61-67,87-92,94-99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "6f575a817fa0ee9ad5eccd8d04b74108c5292f24",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
