@@ -1,0 +1,85 @@
+android/src/main/java/com/swmansion/enriched/markdown/spans/BaselineShiftSpan.kt
+  s_4f2b7b3619bb33::t_98ac56e5fdee39 3,23-26,29-31,34-36,38-40,47-64
+android/src/main/java/com/swmansion/enriched/markdown/spans/PillBackgroundSpan.kt
+  s_4f2b7b3619bb33::t_634fa254dcf6bf 22-29,81-83,85-86,89,91
+docs/docs/ACCESSIBILITY.md
+  s_4f2b7b3619bb33::t_d3cf13a346f043 1-184
+docs/docs/API_REFERENCE.md
+  s_4f2b7b3619bb33::t_4f15e03faf6d6e 1-1088
+docs/docs/BREAKING_CHANGES.md
+  s_4f2b7b3619bb33::t_fbff435fd2cdaf 1-87
+docs/docs/CODE_HIGHLIGHT.md
+  s_4f2b7b3619bb33::t_cb18645e6858cc 1-80,82-133
+docs/docs/COPY_OPTIONS.md
+  s_4f2b7b3619bb33::t_435447ded54655 1-132
+docs/docs/ELEMENTS_STRUCTURE.md
+  s_4f2b7b3619bb33::t_1f8fcd72961411 1-160
+docs/docs/IMAGE_CACHING.md
+  s_4f2b7b3619bb33::t_5f4a3429c2e3c9 1-55
+docs/docs/INPUT.md
+  s_4f2b7b3619bb33::t_109916eb3b7218 1-288
+docs/docs/LATEX_MATH.md
+  s_4f2b7b3619bb33::t_29c245003dab02 1,3,5-6,8,10-14,16-85,87-91,93-144
+docs/docs/MACOS.md
+  s_4f2b7b3619bb33::t_e4f05dc6898e1f 1-19
+docs/docs/MARKDOWN_STREAMING.md
+  s_4f2b7b3619bb33::t_3593f61850082b 1-62
+docs/docs/MENTIONS.md
+  s_4f2b7b3619bb33::t_86724ef3b60af2 1-97
+docs/docs/NATIVE_ASSETS.md
+  s_4f2b7b3619bb33::t_50044a3c411220 1-127
+docs/docs/RTL.md
+  s_4f2b7b3619bb33::t_a03bf464bc9690 1-82
+docs/docs/STYLES.md
+  s_4f2b7b3619bb33::t_9a56cfcdfa4893 1-559
+docs/docs/TESTING.md
+  s_4f2b7b3619bb33::t_f06070209f35f7 1-112
+docs/docs/TEXT.md
+  s_4f2b7b3619bb33::t_e80c1e888ec870 1-120
+docs/docs/WEB.md
+  s_4f2b7b3619bb33::t_7c968e956028d8 1-50
+ios/renderer/LinkRenderer.m
+  s_4f2b7b3619bb33::t_da8726f17364cd 18-19,102-104,111
+ios/utils/ParagraphStyleUtils.m
+  s_4f2b7b3619bb33::t_0053ddf09cde7a 5,374-381
+ios/utils/PillBackground.m
+  s_4f2b7b3619bb33::t_5d48d00787a582 61-66,68-73,89-93,97-99,101
+ios/views/TableContainerView.m
+  s_4f2b7b3619bb33::t_57080943f34784 94-98,272-273
+lib/module/normalizeMarkdownStyle.js
+  s_4f2b7b3619bb33::t_babaf998beb0ec 364
+lib/module/normalizeMarkdownStyle.js.map
+  s_4f2b7b3619bb33::t_030e8d1aaf1ba2 1
+lib/module/normalizeMarkdownStyle.web.js
+  s_4f2b7b3619bb33::t_a3f6d618792e24 274
+lib/module/normalizeMarkdownStyle.web.js.map
+  s_4f2b7b3619bb33::t_5e56416dbba9b2 1
+lib/typescript/src/EnrichedMarkdownNativeComponent.d.ts.map
+  s_4f2b7b3619bb33::t_26eb46ddd9bec2 1
+lib/typescript/src/EnrichedMarkdownTextNativeComponent.d.ts.map
+  s_4f2b7b3619bb33::t_846ba5aca9f0ae 1
+lib/typescript/src/normalizeMarkdownStyle.d.ts.map
+  s_4f2b7b3619bb33::t_d2005ab95abab5 1
+lib/typescript/src/normalizeMarkdownStyle.web.d.ts.map
+  s_4f2b7b3619bb33::t_c0e87883c34a3a 1
+lib/typescript/src/types/MarkdownStyle.d.ts.map
+  s_4f2b7b3619bb33::t_086c5cf4e4a4d7 1
+lib/typescript/src/types/MarkdownStyleInternal.d.ts.map
+  s_4f2b7b3619bb33::t_a6932d30d005b3 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "198c17871e18d3800d69fa13f5a240c354534888",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
