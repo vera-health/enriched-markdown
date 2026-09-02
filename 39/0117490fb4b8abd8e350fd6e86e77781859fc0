@@ -1,0 +1,973 @@
+LICENSE
+  s_4f2b7b3619bb33::t_cecc4e1057dde7 1-20
+README.md
+  s_4f2b7b3619bb33::t_cb24c4d9449447 1-281
+ReactNativeEnrichedMarkdown.podspec
+  s_4f2b7b3619bb33::t_8eee4a3d077d81 1-127
+android/build.gradle
+  s_4f2b7b3619bb33::t_4a9f41bab7f8d0 1-268
+android/consumer-rules.pro
+  s_4f2b7b3619bb33::t_db36ac19f83756 1-19
+android/generated/java/com/facebook/react/viewmanagers/EnrichedMarkdownManagerDelegate.java
+  s_4f2b7b3619bb33::t_1696b27a7df8bf 1-96
+android/generated/java/com/facebook/react/viewmanagers/EnrichedMarkdownManagerInterface.java
+  s_4f2b7b3619bb33::t_33019a79fdd6ea 1-40
+android/generated/java/com/facebook/react/viewmanagers/EnrichedMarkdownTextInputManagerDelegate.java
+  s_4f2b7b3619bb33::t_e0893de512221e 1-177
+android/generated/java/com/facebook/react/viewmanagers/EnrichedMarkdownTextInputManagerInterface.java
+  s_4f2b7b3619bb33::t_84f58ea8bf688f 1-65
+android/generated/java/com/facebook/react/viewmanagers/EnrichedMarkdownTextManagerDelegate.java
+  s_4f2b7b3619bb33::t_6e242f48864ed7 1-96
+android/generated/java/com/facebook/react/viewmanagers/EnrichedMarkdownTextManagerInterface.java
+  s_4f2b7b3619bb33::t_5661c2c7dced75 1-40
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/ComponentDescriptors.cpp
+  s_4f2b7b3619bb33::t_97d7b58d56cdfa 1-22
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/ComponentDescriptors.h
+  s_4f2b7b3619bb33::t_04aa56e08e699d 1-24
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/EventEmitters.cpp
+  s_4f2b7b3619bb33::t_597dbcde379bfb 1-367
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/EventEmitters.h
+  s_4f2b7b3619bb33::t_0c3754aec37cf2 1-302
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/Props.cpp
+  s_4f2b7b3619bb33::t_99079051fcf640 1-415
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/Props.h
+  s_4f2b7b3619bb33::t_0861981f889537 1-6608
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/ShadowNodes.cpp
+  s_4f2b7b3619bb33::t_ee95e978a520d5 1-17
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/ShadowNodes.h
+  s_4f2b7b3619bb33::t_89747afcb51594 1-23
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/States.cpp
+  s_4f2b7b3619bb33::t_61e72a1cfd3532 1-16
+android/generated/jni/react/renderer/components/EnrichedMarkdownTextSpec/States.h
+  s_4f2b7b3619bb33::t_a6de3bf2554387 1-20
+android/gradle.properties
+  s_4f2b7b3619bb33::t_94d78e758bb150 1-5
+android/src/main/AndroidManifest.xml
+  s_4f2b7b3619bb33::t_3ddc658610c305 1-2
+android/src/main/baseline-prof.txt
+  s_4f2b7b3619bb33::t_2adc70a5aef96f 1-327
+android/src/main/java/com/swmansion/enriched/markdown/EnrichedMarkdown.kt
+  s_4f2b7b3619bb33::t_e55e6d18b9d7d4 1-739
+android/src/main/java/com/swmansion/enriched/markdown/input/EnrichedMarkdownTextInputManager.kt
+  s_4f2b7b3619bb33::t_8f150bb00b80e9 1-521
+android/src/main/java/com/swmansion/enriched/markdown/input/EnrichedMarkdownTextInputView.kt
+  s_4f2b7b3619bb33::t_1ed69b9a0496ff 1-1070
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/BlockEditCoordinator.kt
+  s_4f2b7b3619bb33::t_d71ed2fb07a7e3 1-196
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/ClipboardCoordinator.kt
+  s_4f2b7b3619bb33::t_218eefeb99594f 1-62
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/EditContext.kt
+  s_4f2b7b3619bb33::t_3e23e293af10a5 1-19
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/EditPipeline.kt
+  s_4f2b7b3619bb33::t_6e630c9ecab34b 1-248
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/EditSession.kt
+  s_4f2b7b3619bb33::t_5f2c5924e2aed5 1-52
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/InputConnectionWrapper.kt
+  s_4f2b7b3619bb33::t_a31b810a180ade 1-148
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/LinkCoordinator.kt
+  s_4f2b7b3619bb33::t_bd759f6ebf975e 1-69
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/MarkdownEditableFactory.kt
+  s_4f2b7b3619bb33::t_37950c91886a0e 1-15
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/MarkdownTextWatcher.kt
+  s_4f2b7b3619bb33::t_8151cee73d9f07 1-41
+android/src/main/java/com/swmansion/enriched/markdown/input/editing/MentionCoordinator.kt
+  s_4f2b7b3619bb33::t_09800e6bfb33e0 1-118
+android/src/main/java/com/swmansion/enriched/markdown/input/formatting/BlockStore.kt
+  s_4f2b7b3619bb33::t_b1192d4303427f 1-254
+android/src/main/java/com/swmansion/enriched/markdown/input/formatting/FormattingStore.kt
+  s_4f2b7b3619bb33::t_eb20c6f3211e9d 1-204
+android/src/main/java/com/swmansion/enriched/markdown/input/formatting/InputFormatter.kt
+  s_4f2b7b3619bb33::t_c91a548a4dabb3 1-225
+android/src/main/java/com/swmansion/enriched/markdown/input/formatting/InputParser.kt
+  s_4f2b7b3619bb33::t_02b20a4ae57e86 1-182
+android/src/main/java/com/swmansion/enriched/markdown/input/formatting/InputRemend.kt
+  s_4f2b7b3619bb33::t_39acba6ed0fd27 1-121
+android/src/main/java/com/swmansion/enriched/markdown/input/formatting/MarkdownSerializer.kt
+  s_4f2b7b3619bb33::t_fa6b0d5adea5b7 1-203
+android/src/main/java/com/swmansion/enriched/markdown/input/formatting/RangeEditAdjustment.kt
+  s_4f2b7b3619bb33::t_82245eb61b5d6a 1-149
+android/src/main/java/com/swmansion/enriched/markdown/input/layout/InputEventEmitter.kt
+  s_4f2b7b3619bb33::t_55e63f5f3ea2b0 1-245
+android/src/main/java/com/swmansion/enriched/markdown/input/layout/InputLayoutManager.kt
+  s_4f2b7b3619bb33::t_8b4dc0b7f2337f 1-28
+android/src/main/java/com/swmansion/enriched/markdown/input/layout/InputMeasurementStore.kt
+  s_4f2b7b3619bb33::t_ff1e3f391c385d 1-143
+android/src/main/java/com/swmansion/enriched/markdown/input/spans/InputBulletSpan.kt
+  s_4f2b7b3619bb33::t_02d66396f8cd50 1-82
+android/src/main/java/com/swmansion/enriched/markdown/input/spans/InputHeadingSpan.kt
+  s_4f2b7b3619bb33::t_bc2f8d5d5b26db 1-58
+android/src/main/java/com/swmansion/enriched/markdown/input/spans/InputListItemSpacingSpan.kt
+  s_4f2b7b3619bb33::t_8e212ac8c702c9 1-37
+android/src/main/java/com/swmansion/enriched/markdown/input/spans/InputOrderedListMarkerSpan.kt
+  s_4f2b7b3619bb33::t_b8489e00a57390 1-63
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/BlockHandler.kt
+  s_4f2b7b3619bb33::t_5c9080363df549 1-54
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/BoldStyleHandler.kt
+  s_4f2b7b3619bb33::t_ccfb886de4e557 1-35
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/HeadingBlockHandler.kt
+  s_4f2b7b3619bb33::t_fb2f7b97ec45db 1-27
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/ItalicStyleHandler.kt
+  s_4f2b7b3619bb33::t_2578f5b1d537e0 1-35
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/LinkStyleHandler.kt
+  s_4f2b7b3619bb33::t_f6c0f94257abfb 1-75
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/OrderedListBlockHandler.kt
+  s_4f2b7b3619bb33::t_23fb23f50d7be6 1-38
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/SpoilerStyleHandler.kt
+  s_4f2b7b3619bb33::t_40ca39f16121c1 1-36
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/StrikethroughStyleHandler.kt
+  s_4f2b7b3619bb33::t_e5fe03586f0005 1-24
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/StyleHandler.kt
+  s_4f2b7b3619bb33::t_594fd364160f0b 1-18
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/StyleMergingConfig.kt
+  s_4f2b7b3619bb33::t_4b8dbfcb084157 1-10
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/UnderlineStyleHandler.kt
+  s_4f2b7b3619bb33::t_4717aa32906a68 1-24
+android/src/main/java/com/swmansion/enriched/markdown/input/styles/UnorderedListBlockHandler.kt
+  s_4f2b7b3619bb33::t_4ac7a6304c617a 1-37
+android/src/main/java/com/swmansion/enriched/markdown/input/toolbar/InputContextMenu.kt
+  s_4f2b7b3619bb33::t_8653a37886c4c7 1-204
+android/src/main/java/com/swmansion/enriched/markdown/renderer/BaselineShiftRenderer.kt
+  s_4f2b7b3619bb33::t_8ab17511315ea5 1-44
+android/src/main/java/com/swmansion/enriched/markdown/renderer/BlockStyleContext.kt
+  s_4f2b7b3619bb33::t_9b64d952f6b64e 1-159
+android/src/main/java/com/swmansion/enriched/markdown/renderer/BlockquoteRenderer.kt
+  s_4f2b7b3619bb33::t_935980fe22ea89 1-175
+android/src/main/java/com/swmansion/enriched/markdown/renderer/CodeBlockRenderer.kt
+  s_4f2b7b3619bb33::t_4f8771c00e3840 1-119
+android/src/main/java/com/swmansion/enriched/markdown/renderer/CodeRenderer.kt
+  s_4f2b7b3619bb33::t_d859718b53915a 1-36
+android/src/main/java/com/swmansion/enriched/markdown/renderer/DocumentRenderer.kt
+  s_4f2b7b3619bb33::t_5f23d996879936 1-16
+android/src/main/java/com/swmansion/enriched/markdown/renderer/EmphasisRenderer.kt
+  s_4f2b7b3619bb33::t_aaabee4588c0c4 1-27
+android/src/main/java/com/swmansion/enriched/markdown/renderer/HeadingRenderer.kt
+  s_4f2b7b3619bb33::t_20ea412758a4e4 1-75
+android/src/main/java/com/swmansion/enriched/markdown/renderer/HighlightRenderer.kt
+  s_4f2b7b3619bb33::t_349cbab7e7622b 1-25
+android/src/main/java/com/swmansion/enriched/markdown/renderer/ImageRenderer.kt
+  s_4f2b7b3619bb33::t_ca2729b9067527 1-61
+android/src/main/java/com/swmansion/enriched/markdown/renderer/LineBreakRenderer.kt
+  s_4f2b7b3619bb33::t_b735ea98e410cd 1-16
+android/src/main/java/com/swmansion/enriched/markdown/renderer/LinkRenderer.kt
+  s_4f2b7b3619bb33::t_50b919d0335968 1-48
+android/src/main/java/com/swmansion/enriched/markdown/renderer/ListContextManager.kt
+  s_4f2b7b3619bb33::t_e8bded6730e835 1-90
+android/src/main/java/com/swmansion/enriched/markdown/renderer/ListItemRenderer.kt
+  s_4f2b7b3619bb33::t_e264e9db199099 1-183
+android/src/main/java/com/swmansion/enriched/markdown/renderer/ListRenderer.kt
+  s_4f2b7b3619bb33::t_d302b556bebbb7 1-113
+android/src/main/java/com/swmansion/enriched/markdown/renderer/NodeRenderer.kt
+  s_4f2b7b3619bb33::t_029f8e69d93f7e 1-169
+android/src/main/java/com/swmansion/enriched/markdown/renderer/ParagraphRenderer.kt
+  s_4f2b7b3619bb33::t_7a386949cc36af 1-75
+android/src/main/java/com/swmansion/enriched/markdown/renderer/Renderer.kt
+  s_4f2b7b3619bb33::t_ec5974bd0a0ed3 1-113
+android/src/main/java/com/swmansion/enriched/markdown/renderer/SoftBreakRenderer.kt
+  s_4f2b7b3619bb33::t_14a85d41f33dd5 1-16
+android/src/main/java/com/swmansion/enriched/markdown/renderer/SpanStyleCache.kt
+  s_4f2b7b3619bb33::t_9a444c670152a7 1-137
+android/src/main/java/com/swmansion/enriched/markdown/renderer/SpoilerRenderer.kt
+  s_4f2b7b3619bb33::t_c7e0e649548ccf 1-25
+android/src/main/java/com/swmansion/enriched/markdown/renderer/StrikethroughRenderer.kt
+  s_4f2b7b3619bb33::t_bb2ba56fa4cd0a 1-27
+android/src/main/java/com/swmansion/enriched/markdown/renderer/StrongRenderer.kt
+  s_4f2b7b3619bb33::t_4bbf4714fc71fd 1-27
+android/src/main/java/com/swmansion/enriched/markdown/renderer/SubscriptRenderer.kt
+  s_4f2b7b3619bb33::t_096e456f517272 1-11
+android/src/main/java/com/swmansion/enriched/markdown/renderer/SuperscriptRenderer.kt
+  s_4f2b7b3619bb33::t_37ec13e899aac4 1-11
+android/src/main/java/com/swmansion/enriched/markdown/renderer/TextRenderer.kt
+  s_4f2b7b3619bb33::t_2144945166e06e 1-30
+android/src/main/java/com/swmansion/enriched/markdown/renderer/ThematicBreakRenderer.kt
+  s_4f2b7b3619bb33::t_d99c9b74ec886e 1-45
+android/src/main/java/com/swmansion/enriched/markdown/renderer/UnderlineRenderer.kt
+  s_4f2b7b3619bb33::t_f011ea84e7e8c3 1-27
+android/src/main/java/com/swmansion/enriched/markdown/spans/BaseListSpan.kt
+  s_4f2b7b3619bb33::t_bb50275f6a4727 1-151
+android/src/main/java/com/swmansion/enriched/markdown/spans/BaselineShiftSpan.kt
+  s_4f2b7b3619bb33::t_8c422bf0643736 1-27
+android/src/main/java/com/swmansion/enriched/markdown/spans/BlockquoteSpan.kt
+  s_4f2b7b3619bb33::t_90380ade1cd2f7 1-302
+android/src/main/java/com/swmansion/enriched/markdown/spans/CodeBackgroundSpan.kt
+  s_4f2b7b3619bb33::t_a92bfe2842aed4 1-204
+android/src/main/java/com/swmansion/enriched/markdown/spans/CodeBlockSpan.kt
+  s_4f2b7b3619bb33::t_4e3e3bad1c8d14 1-193
+android/src/main/java/com/swmansion/enriched/markdown/spans/CodeSpan.kt
+  s_4f2b7b3619bb33::t_477faa94aeac61 1-32
+android/src/main/java/com/swmansion/enriched/markdown/spans/EmphasisSpan.kt
+  s_4f2b7b3619bb33::t_4c9a4cad450d7a 1-42
+android/src/main/java/com/swmansion/enriched/markdown/spans/FadeInSpan.kt
+  s_4f2b7b3619bb33::t_5cc51f5bee0153 1-25
+android/src/main/java/com/swmansion/enriched/markdown/spans/HeadingSpan.kt
+  s_4f2b7b3619bb33::t_5f2863a6e63d7d 1-38
+android/src/main/java/com/swmansion/enriched/markdown/spans/HighlightSpan.kt
+  s_4f2b7b3619bb33::t_6f70ef711c3903 1-26
+android/src/main/java/com/swmansion/enriched/markdown/spans/ImageSpan.kt
+  s_4f2b7b3619bb33::t_62f1e7bc045e1e 1-471
+android/src/main/java/com/swmansion/enriched/markdown/spans/LineHeightSpan.kt
+  s_4f2b7b3619bb33::t_5721ee2866e312 1-27
+android/src/main/java/com/swmansion/enriched/markdown/spans/LinkSpan.kt
+  s_4f2b7b3619bb33::t_53de2473913262 1-70
+android/src/main/java/com/swmansion/enriched/markdown/spans/ListItemSpacingSpan.kt
+  s_4f2b7b3619bb33::t_aa18b9a2ecc50a 1-33
+android/src/main/java/com/swmansion/enriched/markdown/spans/ListMarkerAnchorSpan.kt
+  s_4f2b7b3619bb33::t_86159a613f614a 1-38
+android/src/main/java/com/swmansion/enriched/markdown/spans/MarginBottomSpan.kt
+  s_4f2b7b3619bb33::t_5281cb189f6550 1-76
+android/src/main/java/com/swmansion/enriched/markdown/spans/MathModels.kt
+  s_4f2b7b3619bb33::t_b7b2ecf2500c54 1-18
+android/src/main/java/com/swmansion/enriched/markdown/spans/OrderedListSpan.kt
+  s_4f2b7b3619bb33::t_4fc38eb1e8da05 1-87
+android/src/main/java/com/swmansion/enriched/markdown/spans/PillBackgroundSpan.kt
+  s_4f2b7b3619bb33::t_850438653b5d9f 1-134
+android/src/main/java/com/swmansion/enriched/markdown/spans/SpoilerSpan.kt
+  s_4f2b7b3619bb33::t_f639a102bf793a 1-33
+android/src/main/java/com/swmansion/enriched/markdown/spans/StrikethroughSpan.kt
+  s_4f2b7b3619bb33::t_efbbaa172e1bb9 1-12
+android/src/main/java/com/swmansion/enriched/markdown/spans/StrongSpan.kt
+  s_4f2b7b3619bb33::t_d4deb02da08ed1 1-39
+android/src/main/java/com/swmansion/enriched/markdown/spans/TaskListSpan.kt
+  s_4f2b7b3619bb33::t_1948042a96db5a 1-135
+android/src/main/java/com/swmansion/enriched/markdown/spans/TextSpan.kt
+  s_4f2b7b3619bb33::t_5e3f025507f02a 1-26
+android/src/main/java/com/swmansion/enriched/markdown/spans/ThematicBreakSpan.kt
+  s_4f2b7b3619bb33::t_38561f6d0f3c0b 1-69
+android/src/main/java/com/swmansion/enriched/markdown/spans/TrailingKernSpan.kt
+  s_4f2b7b3619bb33::t_8e4f6df61332f5 1-22
+android/src/main/java/com/swmansion/enriched/markdown/spans/UnorderedListSpan.kt
+  s_4f2b7b3619bb33::t_1056c9d06aed0c 1-93
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/ParticleStrategy.kt
+  s_4f2b7b3619bb33::t_1875f708d9c86c 1-68
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SegmentKey.kt
+  s_4f2b7b3619bb33::t_f42b3a74dbe56f 1-13
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SolidStrategy.kt
+  s_4f2b7b3619bb33::t_7ee8e892ab9aff 1-95
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerAnimator.kt
+  s_4f2b7b3619bb33::t_391583ac3af063 1-89
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerCapable.kt
+  s_4f2b7b3619bb33::t_6bb05b83364428 1-5
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerConstants.kt
+  s_4f2b7b3619bb33::t_3174b83f694453 1-3
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerDrawContext.kt
+  s_4f2b7b3619bb33::t_3a6354a19cdcda 1-33
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerDrawUtils.kt
+  s_4f2b7b3619bb33::t_241cb512044191 1-40
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerOverlay.kt
+  s_4f2b7b3619bb33::t_bc9bd83522e570 1-17
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerOverlayDrawer.kt
+  s_4f2b7b3619bb33::t_85e309c23a76fd 1-152
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerParticleDrawable.kt
+  s_4f2b7b3619bb33::t_a0798dce09179e 1-237
+android/src/main/java/com/swmansion/enriched/markdown/spoiler/SpoilerStrategy.kt
+  s_4f2b7b3619bb33::t_6cd46cfc56fce7 1-53
+android/src/math/java/com/swmansion/enriched/markdown/renderer/MathInlineRenderer.kt
+  s_4f2b7b3619bb33::t_df779f4eebc63f 1-52
+android/src/math/java/com/swmansion/enriched/markdown/spans/MathInlinePlaceholderSpan.kt
+  s_4f2b7b3619bb33::t_22d27c38519df5 1-41
+android/src/math/java/com/swmansion/enriched/markdown/spans/MathInlineSpan.kt
+  s_4f2b7b3619bb33::t_e7c2cfe60b9645 1-92
+android/src/math/java/com/swmansion/enriched/markdown/spans/MathMeasureHelper.kt
+  s_4f2b7b3619bb33::t_9ff5b615bc12ca 1-57
+android/src/math/java/com/swmansion/enriched/markdown/views/MathContainerView.kt
+  s_4f2b7b3619bb33::t_819a302034998d 1-170
+cpp/highlight/CodeBlockHighlighter.cpp
+  s_4f2b7b3619bb33::t_6d75c4c43100b9 1-284
+cpp/highlight/CodeBlockHighlighter.hpp
+  s_4f2b7b3619bb33::t_3ba009998219b2 1-66
+cpp/highlight/CodeBlockLanguages.cpp
+  s_4f2b7b3619bb33::t_17c70ede3b18e9 1-138
+cpp/highlight/CodeBlockLanguages.hpp
+  s_4f2b7b3619bb33::t_21ae5691ed281f 1-25
+cpp/highlight/HighlightGrammars.hpp
+  s_4f2b7b3619bb33::t_f349d1ffe46152 1-28
+cpp/highlight/code_highlight_podspec.rb
+  s_4f2b7b3619bb33::t_c0860a62093d14 1-211
+cpp/highlight/gen-registry.mjs
+  s_4f2b7b3619bb33::t_ac1385f638d1a0 1-155
+cpp/highlight/grammar-versions.json
+  s_4f2b7b3619bb33::t_5b8be0fb90bfa4 1-159
+cpp/highlight/vendor/generated/generated_queries.h
+  s_4f2b7b3619bb33::t_f8d88d68ad2b32 1-1665
+cpp/highlight/vendor/generated/generated_registry.cpp
+  s_4f2b7b3619bb33::t_96e60687faa504 1-59
+cpp/md4c/md4c.c
+  s_4f2b7b3619bb33::t_3ea577b24f13e4 1-7235
+cpp/md4c/md4c.h
+  s_4f2b7b3619bb33::t_6e58fcd10e0ea9 1-475
+cpp/parser/MD4CParser.cpp
+  s_4f2b7b3619bb33::t_dd81a68a352664 1-651
+cpp/parser/MD4CParser.hpp
+  s_4f2b7b3619bb33::t_0fba8e08ca2d6d 1-33
+cpp/parser/MarkdownASTNode.hpp
+  s_4f2b7b3619bb33::t_302e74cef2b4ac 1-64
+cpp/wasm/ASTSerializer.cpp
+  s_4f2b7b3619bb33::t_2cbccbceb6945f 1-160
+cpp/wasm/ASTSerializer.hpp
+  s_4f2b7b3619bb33::t_b11f7f13d15167 1-17
+cpp/wasm/build.sh
+  s_4f2b7b3619bb33::t_e10b3f207668d4 1-59
+cpp/wasm/md4c_wasm.cpp
+  s_4f2b7b3619bb33::t_007a8e51f8f593 1-45
+docs/ACCESSIBILITY.md
+  s_4f2b7b3619bb33::t_df9be802eb2cf9 1-184
+docs/API_REFERENCE.md
+  s_4f2b7b3619bb33::t_a8f8a3c2f65c64 1-1088
+docs/BREAKING_CHANGES.md
+  s_4f2b7b3619bb33::t_d531479f9b3976 1-87
+docs/CODE_HIGHLIGHT.md
+  s_4f2b7b3619bb33::t_2a595fac169809 1-133
+docs/COPY_OPTIONS.md
+  s_4f2b7b3619bb33::t_2758db67113b25 1-132
+docs/ELEMENTS_STRUCTURE.md
+  s_4f2b7b3619bb33::t_08d6506c3189a6 1-160
+docs/IMAGE_CACHING.md
+  s_4f2b7b3619bb33::t_c72dee1b2078e5 1-55
+docs/INPUT.md
+  s_4f2b7b3619bb33::t_ada3c668f05693 1-288
+docs/LATEX_MATH.md
+  s_4f2b7b3619bb33::t_1dcee8440beceb 1-144
+docs/MACOS.md
+  s_4f2b7b3619bb33::t_004d4da041d826 1-19
+docs/MARKDOWN_STREAMING.md
+  s_4f2b7b3619bb33::t_301228a45070cb 1-62
+docs/MENTIONS.md
+  s_4f2b7b3619bb33::t_c6869656f16efd 1-97
+docs/NATIVE_ASSETS.md
+  s_4f2b7b3619bb33::t_e48df8f486134c 1-127
+docs/RTL.md
+  s_4f2b7b3619bb33::t_b76f8290c42992 1-82
+docs/STYLES.md
+  s_4f2b7b3619bb33::t_37b6db984ccb5b 1-559
+docs/TESTING.md
+  s_4f2b7b3619bb33::t_29ba003a7f9b2c 1-112
+docs/TEXT.md
+  s_4f2b7b3619bb33::t_64d16016007cac 1-120
+docs/WEB.md
+  s_4f2b7b3619bb33::t_428b90cc2e9fd1 1-50
+ios/EnrichedMarkdown.h
+  s_4f2b7b3619bb33::t_94cf006278199f 1-27
+ios/EnrichedMarkdown.mm
+  s_4f2b7b3619bb33::t_4b1a7ddc052105 1-1383
+ios/EnrichedMarkdownText.h
+  s_4f2b7b3619bb33::t_4bff6823e3f18f 1-27
+ios/EnrichedMarkdownText.mm
+  s_4f2b7b3619bb33::t_15c863b8101540 1-883
+ios/attachments/ENRMImageAttachment.h
+  s_4f2b7b3619bb33::t_dcc9f0614e7240 1-36
+ios/attachments/ENRMImageAttachment.m
+  s_4f2b7b3619bb33::t_5d2a1e869295c9 1-408
+ios/attachments/ENRMMathInlineAttachment+macOS.m
+  s_4f2b7b3619bb33::t_38689e48c43f9f 1-60
+ios/attachments/ENRMMathInlineAttachment.h
+  s_4f2b7b3619bb33::t_7afded0e32d8ff 1-24
+ios/attachments/ENRMMathInlineAttachment.m
+  s_4f2b7b3619bb33::t_be16fdfd219f9a 1-89
+ios/attachments/ENRMMathInlineAttachmentShared.h
+  s_4f2b7b3619bb33::t_cf25f0dff578e3 1-19
+ios/attachments/ThematicBreakAttachment.h
+  s_4f2b7b3619bb33::t_cc3cf2e9c75ee9 1-15
+ios/attachments/ThematicBreakAttachment.m
+  s_4f2b7b3619bb33::t_c7088430a62eb0 1-33
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/ComponentDescriptors.cpp
+  s_4f2b7b3619bb33::t_97f52eaa09a69e 1-22
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/ComponentDescriptors.h
+  s_4f2b7b3619bb33::t_392c6b475c05cf 1-24
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/EventEmitters.cpp
+  s_4f2b7b3619bb33::t_0d50ee92a63df5 1-367
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/EventEmitters.h
+  s_4f2b7b3619bb33::t_ad6c025a830690 1-302
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/Props.cpp
+  s_4f2b7b3619bb33::t_7fa115e5087142 1-415
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/Props.h
+  s_4f2b7b3619bb33::t_68e32f4fa0f6fc 1-6608
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/RCTComponentViewHelpers.h
+  s_4f2b7b3619bb33::t_f237eb51528184 1-466
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/ShadowNodes.cpp
+  s_4f2b7b3619bb33::t_be81adbece6143 1-17
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/ShadowNodes.h
+  s_4f2b7b3619bb33::t_30fb155b057914 1-23
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/States.cpp
+  s_4f2b7b3619bb33::t_a6d91465c8b3b7 1-16
+ios/generated/ReactCodegen/EnrichedMarkdownTextSpec/States.h
+  s_4f2b7b3619bb33::t_b5873cfc4546b9 1-20
+ios/input/ENRMAutoLinkDetector.h
+  s_4f2b7b3619bb33::t_619b3b2deda897 1-33
+ios/input/ENRMAutoLinkDetector.mm
+  s_4f2b7b3619bb33::t_6c92d2d5d7e20b 1-249
+ios/input/ENRMBlockEditCoordinator.h
+  s_4f2b7b3619bb33::t_ca1913a8464ae1 1-71
+ios/input/ENRMBlockEditCoordinator.mm
+  s_4f2b7b3619bb33::t_19e66116e4867b 1-195
+ios/input/ENRMBlockRange.h
+  s_4f2b7b3619bb33::t_2fb39a95d1b044 1-28
+ios/input/ENRMBlockRange.mm
+  s_4f2b7b3619bb33::t_601f421c3bc40b 1-30
+ios/input/ENRMBlockStore.h
+  s_4f2b7b3619bb33::t_50c2e7f7402307 1-56
+ios/input/ENRMBlockStore.mm
+  s_4f2b7b3619bb33::t_b80da4d932ef95 1-275
+ios/input/ENRMClipboardCoordinator.h
+  s_4f2b7b3619bb33::t_8cdf4d7e66f5d5 1-37
+ios/input/ENRMClipboardCoordinator.mm
+  s_4f2b7b3619bb33::t_f47f170a5d673a 1-97
+ios/input/ENRMDetectorPipeline.h
+  s_4f2b7b3619bb33::t_33dca2753af4be 1-29
+ios/input/ENRMDetectorPipeline.mm
+  s_4f2b7b3619bb33::t_77759f5422cd34 1-53
+ios/input/ENRMEditPipeline.h
+  s_4f2b7b3619bb33::t_4519580a0ba370 1-76
+ios/input/ENRMEditPipeline.mm
+  s_4f2b7b3619bb33::t_1c9271ded50463 1-228
+ios/input/ENRMEditSession.h
+  s_4f2b7b3619bb33::t_893d05043b1b46 1-36
+ios/input/ENRMEditSession.mm
+  s_4f2b7b3619bb33::t_6e8dd4c4ecc5d0 1-63
+ios/input/ENRMFormattingRange.h
+  s_4f2b7b3619bb33::t_6abd4b116cb0d8 1-19
+ios/input/ENRMFormattingRange.mm
+  s_4f2b7b3619bb33::t_56259b54f9e05b 1-28
+ios/input/ENRMFormattingStore.h
+  s_4f2b7b3619bb33::t_597978ad5cb580 1-51
+ios/input/ENRMFormattingStore.mm
+  s_4f2b7b3619bb33::t_bc481eb04de5fc 1-302
+ios/input/ENRMInputBlockType.h
+  s_4f2b7b3619bb33::t_8545b32024d338 1-91
+ios/input/ENRMInputBlockType.mm
+  s_4f2b7b3619bb33::t_4504d287597513 1-5
+ios/input/ENRMInputDecorationDrawer.h
+  s_4f2b7b3619bb33::t_fdf55faac127c4 1-18
+ios/input/ENRMInputEventEmitter.h
+  s_4f2b7b3619bb33::t_2ea5fbb0b5a632 1-52
+ios/input/ENRMInputEventEmitter.mm
+  s_4f2b7b3619bb33::t_834baae95560ac 1-284
+ios/input/ENRMInputFormatter.h
+  s_4f2b7b3619bb33::t_b7df40438bd5da 1-48
+ios/input/ENRMInputFormatter.mm
+  s_4f2b7b3619bb33::t_28da10f53063e6 1-316
+ios/input/ENRMInputFormatterStyle.h
+  s_4f2b7b3619bb33::t_c4edb229e5aac8 1-65
+ios/input/ENRMInputFormatterStyle.mm
+  s_4f2b7b3619bb33::t_b48e6cc630cec3 1-156
+ios/input/ENRMInputLayoutManager.h
+  s_4f2b7b3619bb33::t_e4ae49520236b7 1-20
+ios/input/ENRMInputLayoutManager.mm
+  s_4f2b7b3619bb33::t_db03b0d5d30e8a 1-35
+ios/input/ENRMInputLinkPrompt.h
+  s_4f2b7b3619bb33::t_11e35bfd85b68d 1-9
+ios/input/ENRMInputLinkPrompt.mm
+  s_4f2b7b3619bb33::t_1035e1a37603e4 1-71
+ios/input/ENRMInputListMarkerDrawer.h
+  s_4f2b7b3619bb33::t_33f00d27c6dc18 1-32
+ios/input/ENRMInputListMarkerDrawer.mm
+  s_4f2b7b3619bb33::t_850e6809039b73 1-426
+ios/input/ENRMInputMentionCandidate.h
+  s_4f2b7b3619bb33::t_ca1a4234c2c20b 1-21
+ios/input/ENRMInputMentionCandidate.mm
+  s_4f2b7b3619bb33::t_198c0c5aa969ee 1-18
+ios/input/ENRMInputParser.h
+  s_4f2b7b3619bb33::t_f8834c7fb001a6 1-22
+ios/input/ENRMInputParser.mm
+  s_4f2b7b3619bb33::t_ed6fbc2a676336 1-630
+ios/input/ENRMInputRemend.h
+  s_4f2b7b3619bb33::t_b4831632e91ad1 1-9
+ios/input/ENRMInputRemend.mm
+  s_4f2b7b3619bb33::t_e45d0ec4ef9041 1-136
+ios/input/ENRMInputStyleStateBuilder.h
+  s_4f2b7b3619bb33::t_c8657f44605fa7 1-40
+ios/input/ENRMInputStyleStateBuilder.mm
+  s_4f2b7b3619bb33::t_b9feae05b0a683 1-60
+ios/input/ENRMInputStyledRange.h
+  s_4f2b7b3619bb33::t_a33b92c628f961 1-29
+ios/input/ENRMInputStyledRange.mm
+  s_4f2b7b3619bb33::t_5d69ae291ffc13 1-4
+ios/input/ENRMInputTextView.h
+  s_4f2b7b3619bb33::t_abee410dae9afe 1-15
+ios/input/ENRMInputTextView.mm
+  s_4f2b7b3619bb33::t_d4f932f414de61 1-251
+ios/input/ENRMInputTypingAttributesController.h
+  s_4f2b7b3619bb33::t_43c95b407f0df1 1-42
+ios/input/ENRMInputTypingAttributesController.mm
+  s_4f2b7b3619bb33::t_1980f9d0fce91f 1-203
+ios/input/ENRMLinkCoordinator.h
+  s_4f2b7b3619bb33::t_d018ae6ad60b70 1-41
+ios/input/ENRMLinkCoordinator.mm
+  s_4f2b7b3619bb33::t_af9da51b73db4a 1-89
+ios/input/ENRMLinkRegexConfig.h
+  s_4f2b7b3619bb33::t_8dc7db122b9b10 1-26
+ios/input/ENRMLinkRegexConfig.mm
+  s_4f2b7b3619bb33::t_576ce2c7905e64 1-60
+ios/input/ENRMMarkdownSerializer.h
+  s_4f2b7b3619bb33::t_8ce916c50e50ca 1-24
+ios/input/ENRMMarkdownSerializer.mm
+  s_4f2b7b3619bb33::t_5be1ebfb3e9e9f 1-290
+ios/input/ENRMMentionCoordinator.h
+  s_4f2b7b3619bb33::t_0f7df5695c1872 1-45
+ios/input/ENRMMentionCoordinator.mm
+  s_4f2b7b3619bb33::t_dc945ff4a57f45 1-167
+ios/input/ENRMRangeEditAdjustment.h
+  s_4f2b7b3619bb33::t_4b0d9ea7e9718c 1-38
+ios/input/ENRMRangeEditAdjustment.mm
+  s_4f2b7b3619bb33::t_68bcb331bb9380 1-91
+ios/input/ENRMRangeStoreUtils.h
+  s_4f2b7b3619bb33::t_b46b8220429772 1-39
+ios/input/ENRMTextDetector.h
+  s_4f2b7b3619bb33::t_5a3694b8216e54 1-30
+ios/input/ENRMWordsUtils.h
+  s_4f2b7b3619bb33::t_0e375ad88799a2 1-28
+ios/input/ENRMWordsUtils.mm
+  s_4f2b7b3619bb33::t_7d8b74deb64d76 1-88
+ios/input/EnrichedMarkdownTextInput+ContextMenu.mm
+  s_4f2b7b3619bb33::t_596902fc16983b 1-175
+ios/input/EnrichedMarkdownTextInput+Internal.h
+  s_4f2b7b3619bb33::t_89824b536bbc27 1-64
+ios/input/EnrichedMarkdownTextInput.h
+  s_4f2b7b3619bb33::t_567feb783fb3e2 1-23
+ios/input/EnrichedMarkdownTextInput.mm
+  s_4f2b7b3619bb33::t_6bfbe641813806 1-2032
+ios/input/InputStylePropsUtils.h
+  s_4f2b7b3619bb33::t_d7db28d7078c6f 1-185
+ios/input/internals/EnrichedMarkdownTextInputComponentDescriptor.h
+  s_4f2b7b3619bb33::t_7f15c6197cfc50 1-19
+ios/input/internals/EnrichedMarkdownTextInputShadowNode.h
+  s_4f2b7b3619bb33::t_b38cf2cdcc67c2 1-40
+ios/input/internals/EnrichedMarkdownTextInputShadowNode.mm
+  s_4f2b7b3619bb33::t_fc1e46919bf6d1 1-84
+ios/input/internals/EnrichedMarkdownTextInputState.h
+  s_4f2b7b3619bb33::t_38543b80829b22 1-23
+ios/input/styles/ENRMBlockHandler.h
+  s_4f2b7b3619bb33::t_0405c41732aa91 1-46
+ios/input/styles/ENRMBoldStyleHandler.h
+  s_4f2b7b3619bb33::t_0ffd8cd1f618f1 1-10
+ios/input/styles/ENRMBoldStyleHandler.mm
+  s_4f2b7b3619bb33::t_fc9e393f423fde 1-30
+ios/input/styles/ENRMHeadingBlockHandler.h
+  s_4f2b7b3619bb33::t_9c4042b818443f 1-15
+ios/input/styles/ENRMHeadingBlockHandler.mm
+  s_4f2b7b3619bb33::t_8d256167184504 1-38
+ios/input/styles/ENRMItalicStyleHandler.h
+  s_4f2b7b3619bb33::t_037bbab87688df 1-10
+ios/input/styles/ENRMItalicStyleHandler.mm
+  s_4f2b7b3619bb33::t_5d79262344f9cc 1-30
+ios/input/styles/ENRMLinkStyleHandler.h
+  s_4f2b7b3619bb33::t_10f9cf28d3a95f 1-10
+ios/input/styles/ENRMLinkStyleHandler.mm
+  s_4f2b7b3619bb33::t_e8321af71d951a 1-52
+ios/input/styles/ENRMOrderedListBlockHandler.h
+  s_4f2b7b3619bb33::t_45691309ff2966 1-14
+ios/input/styles/ENRMOrderedListBlockHandler.mm
+  s_4f2b7b3619bb33::t_eb0c5f03012869 1-48
+ios/input/styles/ENRMSpoilerStyleHandler.h
+  s_4f2b7b3619bb33::t_0298ab6f59ab8e 1-10
+ios/input/styles/ENRMSpoilerStyleHandler.mm
+  s_4f2b7b3619bb33::t_971898a3919488 1-33
+ios/input/styles/ENRMStrikethroughStyleHandler.h
+  s_4f2b7b3619bb33::t_8d918a8e475af0 1-10
+ios/input/styles/ENRMStrikethroughStyleHandler.mm
+  s_4f2b7b3619bb33::t_48cc0467f3b17e 1-28
+ios/input/styles/ENRMStyleHandler.h
+  s_4f2b7b3619bb33::t_cd47eccd4e058a 1-26
+ios/input/styles/ENRMStyleMergingConfig.h
+  s_4f2b7b3619bb33::t_fa1346e3a630d3 1-26
+ios/input/styles/ENRMStyleMergingConfig.mm
+  s_4f2b7b3619bb33::t_889e3fca9b5a7c 1-21
+ios/input/styles/ENRMUnderlineStyleHandler.h
+  s_4f2b7b3619bb33::t_8f397c7a17be7a 1-10
+ios/input/styles/ENRMUnderlineStyleHandler.mm
+  s_4f2b7b3619bb33::t_cb0449c11894d1 1-28
+ios/input/styles/ENRMUnorderedListBlockHandler.h
+  s_4f2b7b3619bb33::t_66343e83460d48 1-15
+ios/input/styles/ENRMUnorderedListBlockHandler.mm
+  s_4f2b7b3619bb33::t_750ab40666d0ea 1-51
+ios/internals/ENRMViewFreeMeasurement.h
+  s_4f2b7b3619bb33::t_cec643ba7abb19 1-331
+ios/internals/EnrichedMarkdownComponentDescriptor.h
+  s_4f2b7b3619bb33::t_a48b5ce79af0f7 1-18
+ios/internals/EnrichedMarkdownShadowNode.h
+  s_4f2b7b3619bb33::t_8d539fb981313b 1-41
+ios/internals/EnrichedMarkdownShadowNode.mm
+  s_4f2b7b3619bb33::t_5a114c143421e0 1-69
+ios/internals/EnrichedMarkdownState.h
+  s_4f2b7b3619bb33::t_267f92f639a2fd 1-23
+ios/internals/EnrichedMarkdownTextComponentDescriptor.h
+  s_4f2b7b3619bb33::t_42b647c505e2a1 1-19
+ios/internals/EnrichedMarkdownTextShadowNode.h
+  s_4f2b7b3619bb33::t_dc9c3c2fd7cfd4 1-43
+ios/internals/EnrichedMarkdownTextShadowNode.mm
+  s_4f2b7b3619bb33::t_ff532af9758b03 1-69
+ios/internals/EnrichedMarkdownTextState.h
+  s_4f2b7b3619bb33::t_fcb211ca4d352c 1-24
+ios/internals/MeasurementCache.h
+  s_4f2b7b3619bb33::t_ef155cac5b8546 1-249
+ios/internals/ShadowMeasurementUtils.h
+  s_4f2b7b3619bb33::t_0f5dcc276b6441 1-140
+ios/math/ENRMRaTeXBridge.swift
+  s_4f2b7b3619bb33::t_834889686f7453 1-61
+ios/parser/ENRMMarkdownParser.h
+  s_4f2b7b3619bb33::t_62718d95a95f13 1-22
+ios/parser/ENRMMarkdownParser.mm
+  s_4f2b7b3619bb33::t_328f781576fb57 1-52
+ios/parser/MarkdownASTNode.h
+  s_4f2b7b3619bb33::t_8d67e8d2df6d79 1-48
+ios/parser/MarkdownASTNode.m
+  s_4f2b7b3619bb33::t_2d096db3a01343 1-32
+ios/parser/MarkdownParserBridge.mm
+  s_4f2b7b3619bb33::t_dcffb65f6382ad 1-165
+ios/renderer/AttributedRenderer.h
+  s_4f2b7b3619bb33::t_35a62438479366 1-11
+ios/renderer/AttributedRenderer.m
+  s_4f2b7b3619bb33::t_1941ed857eebac 1-216
+ios/renderer/BaseRenderer.h
+  s_4f2b7b3619bb33::t_82e64539b9a279 1-33
+ios/renderer/BaseRenderer.m
+  s_4f2b7b3619bb33::t_51deaba3a12f3a 1-46
+ios/renderer/BaselineShiftTextAttributes.h
+  s_4f2b7b3619bb33::t_24565ee3fc4b18 1-6
+ios/renderer/BaselineShiftTextAttributes.m
+  s_4f2b7b3619bb33::t_6839535c2602dd 1-22
+ios/renderer/BlockquoteRenderer.h
+  s_4f2b7b3619bb33::t_3f8025012342cd 1-6
+ios/renderer/BlockquoteRenderer.m
+  s_4f2b7b3619bb33::t_d9875f731d63fb 1-257
+ios/renderer/CodeBlockRenderer.h
+  s_4f2b7b3619bb33::t_c077dc7bb6a4fe 1-9
+ios/renderer/CodeBlockRenderer.m
+  s_4f2b7b3619bb33::t_0aa650a5677fda 1-94
+ios/renderer/CodeRenderer.h
+  s_4f2b7b3619bb33::t_1d4f46d33e1a3e 1-9
+ios/renderer/CodeRenderer.m
+  s_4f2b7b3619bb33::t_83d10df86e17fe 1-66
+ios/renderer/ENRMImageRenderer.h
+  s_4f2b7b3619bb33::t_116f1992ae7bc8 1-9
+ios/renderer/ENRMImageRenderer.m
+  s_4f2b7b3619bb33::t_0f99301b2a2f74 1-69
+ios/renderer/ENRMMathInlineRenderer.h
+  s_4f2b7b3619bb33::t_bfa6a7030e4c36 1-9
+ios/renderer/ENRMMathInlineRenderer.m
+  s_4f2b7b3619bb33::t_1d2b9af96d0b6f 1-64
+ios/renderer/ENRMSpoilerRenderer.h
+  s_4f2b7b3619bb33::t_a49b434180980f 1-5
+ios/renderer/ENRMSpoilerRenderer.m
+  s_4f2b7b3619bb33::t_1e287b87a0fa3d 1-34
+ios/renderer/EmphasisRenderer.h
+  s_4f2b7b3619bb33::t_f0df8a34f17dc9 1-5
+ios/renderer/EmphasisRenderer.m
+  s_4f2b7b3619bb33::t_9c7db7d660a8af 1-100
+ios/renderer/HeadingRenderer.h
+  s_4f2b7b3619bb33::t_0460354a85ea26 1-6
+ios/renderer/HeadingRenderer.m
+  s_4f2b7b3619bb33::t_4615272b059c8c 1-101
+ios/renderer/HighlightRenderer.h
+  s_4f2b7b3619bb33::t_561c27359e5fba 1-7
+ios/renderer/HighlightRenderer.m
+  s_4f2b7b3619bb33::t_1b7a79e6f61d44 1-33
+ios/renderer/LinkRenderer.h
+  s_4f2b7b3619bb33::t_ead1d951684d62 1-6
+ios/renderer/LinkRenderer.m
+  s_4f2b7b3619bb33::t_168d842fcd7b46 1-112
+ios/renderer/ListItemRenderer.h
+  s_4f2b7b3619bb33::t_6db4ae1a51473e 1-24
+ios/renderer/ListItemRenderer.m
+  s_4f2b7b3619bb33::t_cf3c9a333aa5bf 1-233
+ios/renderer/ListRenderer.h
+  s_4f2b7b3619bb33::t_d50205a7912537 1-13
+ios/renderer/ListRenderer.m
+  s_4f2b7b3619bb33::t_9b2fa77e8e6a71 1-108
+ios/renderer/NodeRenderer.h
+  s_4f2b7b3619bb33::t_189df1b15957f5 1-8
+ios/renderer/ParagraphRenderer.h
+  s_4f2b7b3619bb33::t_a222be75708739 1-6
+ios/renderer/ParagraphRenderer.m
+  s_4f2b7b3619bb33::t_c0961250c6893e 1-78
+ios/renderer/RenderContext.h
+  s_4f2b7b3619bb33::t_f00ca84a02087c 1-128
+ios/renderer/RenderContext.m
+  s_4f2b7b3619bb33::t_ddc47c257f1bd5 1-381
+ios/renderer/RendererFactory.h
+  s_4f2b7b3619bb33::t_4daabe0b87bf32 1-12
+ios/renderer/RendererFactory.m
+  s_4f2b7b3619bb33::t_a788a40756ab8f 1-161
+ios/renderer/StrikethroughRenderer.h
+  s_4f2b7b3619bb33::t_702abd31ca5db4 1-5
+ios/renderer/StrikethroughRenderer.m
+  s_4f2b7b3619bb33::t_1892e945e972df 1-30
+ios/renderer/StrongRenderer.h
+  s_4f2b7b3619bb33::t_b00a125c7eb0c3 1-5
+ios/renderer/StrongRenderer.m
+  s_4f2b7b3619bb33::t_55289fc9aa267b 1-88
+ios/renderer/SubscriptRenderer.h
+  s_4f2b7b3619bb33::t_e757528bc767f1 1-5
+ios/renderer/SubscriptRenderer.m
+  s_4f2b7b3619bb33::t_09f76ebad8a6c1 1-24
+ios/renderer/SuperscriptRenderer.h
+  s_4f2b7b3619bb33::t_977d7779cdda99 1-5
+ios/renderer/SuperscriptRenderer.m
+  s_4f2b7b3619bb33::t_68d3157f9783ae 1-24
+ios/renderer/TextRenderer.h
+  s_4f2b7b3619bb33::t_034e33853df947 1-6
+ios/renderer/TextRenderer.m
+  s_4f2b7b3619bb33::t_88412ad63cf91f 1-18
+ios/renderer/ThematicBreakRenderer.h
+  s_4f2b7b3619bb33::t_3d8eb6c3865c28 1-4
+ios/renderer/ThematicBreakRenderer.m
+  s_4f2b7b3619bb33::t_064f71d0fc4615 1-42
+ios/renderer/UnderlineRenderer.h
+  s_4f2b7b3619bb33::t_586c51ed22b7ee 1-4
+ios/renderer/UnderlineRenderer.m
+  s_4f2b7b3619bb33::t_736aab6dd65ee0 1-29
+ios/styles/ENRMFontSlot.h
+  s_4f2b7b3619bb33::t_bd28a54aa82f98 1-12
+ios/styles/ENRMFontSlot.m
+  s_4f2b7b3619bb33::t_dde45d0b23b510 1-24
+ios/styles/StyleConfig.h
+  s_4f2b7b3619bb33::t_127612f3a3df9d 1-439
+ios/styles/StyleConfig.mm
+  s_4f2b7b3619bb33::t_eadd23fd79157c 1-2661
+ios/utils/AccessibilityInfo.h
+  s_4f2b7b3619bb33::t_bb16c65a2506fe 1-35
+ios/utils/AccessibilityInfo.m
+  s_4f2b7b3619bb33::t_d4220edfc195f6 1-24
+ios/utils/BlockquoteBorder.h
+  s_4f2b7b3619bb33::t_14b412b45786fc 1-26
+ios/utils/BlockquoteBorder.m
+  s_4f2b7b3619bb33::t_0fad986eff9ffa 1-294
+ios/utils/CodeBackground.h
+  s_4f2b7b3619bb33::t_89a76c95c407ce 1-19
+ios/utils/CodeBackground.m
+  s_4f2b7b3619bb33::t_4fa9fa99d1df7b 1-197
+ios/utils/CodeBlockBackground.h
+  s_4f2b7b3619bb33::t_47fc0973c60076 1-17
+ios/utils/CodeBlockBackground.m
+  s_4f2b7b3619bb33::t_ae4084c0ccb6df 1-103
+ios/utils/ContextMenuUtils.h
+  s_4f2b7b3619bb33::t_51538dcde947b7 1-76
+ios/utils/ContextMenuUtils.mm
+  s_4f2b7b3619bb33::t_6e32c5f154a710 1-73
+ios/utils/ENRMAccessibilityLabels.h
+  s_4f2b7b3619bb33::t_54c789685fad1b 1-36
+ios/utils/ENRMAccessibilityLabels.m
+  s_4f2b7b3619bb33::t_a0648dc48e022f 1-5
+ios/utils/ENRMAsyncRenderCoordinator.h
+  s_4f2b7b3619bb33::t_beb24951e83fcb 1-24
+ios/utils/ENRMAsyncRenderCoordinator.m
+  s_4f2b7b3619bb33::t_66c8b9d07ee67b 1-37
+ios/utils/ENRMAtomicSize.h
+  s_4f2b7b3619bb33::t_02ca81856f19b0 1-65
+ios/utils/ENRMCodeBlockContent.h
+  s_4f2b7b3619bb33::t_9ee4b57e12a8e1 1-37
+ios/utils/ENRMCodeBlockContent.mm
+  s_4f2b7b3619bb33::t_3df26f76ce1874 1-79
+ios/utils/ENRMCodeBlockHighlighter.h
+  s_4f2b7b3619bb33::t_543c7877d6b4dd 1-37
+ios/utils/ENRMCodeBlockHighlighter.mm
+  s_4f2b7b3619bb33::t_25a7d76ae8642c 1-51
+ios/utils/ENRMFeatureFlags.h
+  s_4f2b7b3619bb33::t_654c0684036a9e 1-19
+ios/utils/ENRMImageDownloader.h
+  s_4f2b7b3619bb33::t_0c735bbe66b7cd 1-26
+ios/utils/ENRMImageDownloader.m
+  s_4f2b7b3619bb33::t_f8597a07d054fe 1-152
+ios/utils/ENRMLocalImageLoader.h
+  s_4f2b7b3619bb33::t_24003c55e7b26d 1-31
+ios/utils/ENRMLocalImageLoader.m
+  s_4f2b7b3619bb33::t_2e1f1a7d75fc9c 1-68
+ios/utils/ENRMMathFallback.h
+  s_4f2b7b3619bb33::t_e639afeb5ec6b7 1-26
+ios/utils/ENRMMathFallback.m
+  s_4f2b7b3619bb33::t_207c05df57e89c 1-18
+ios/utils/ENRMMenuAction.h
+  s_4f2b7b3619bb33::t_1255f3ca17d078 1-27
+ios/utils/ENRMMenuAction.m
+  s_4f2b7b3619bb33::t_7313a76327d715 1-33
+ios/utils/ENRMParticleOverlayView.h
+  s_4f2b7b3619bb33::t_600824cc5659f8 1-12
+ios/utils/ENRMParticleOverlayView.m
+  s_4f2b7b3619bb33::t_985a80dc3ccffb 1-159
+ios/utils/ENRMSolidOverlayView.h
+  s_4f2b7b3619bb33::t_b430449d519d40 1-12
+ios/utils/ENRMSolidOverlayView.m
+  s_4f2b7b3619bb33::t_6f21c71464b85a 1-25
+ios/utils/ENRMSpoilerCapable.h
+  s_4f2b7b3619bb33::t_23c22262c89265 1-15
+ios/utils/ENRMSpoilerOverlayManager.h
+  s_4f2b7b3619bb33::t_578af9fe55f900 1-21
+ios/utils/ENRMSpoilerOverlayManager.m
+  s_4f2b7b3619bb33::t_38cbce8e410406 1-181
+ios/utils/ENRMSpoilerOverlayView.h
+  s_4f2b7b3619bb33::t_a669af3f051f76 1-49
+ios/utils/ENRMSpoilerOverlayView.m
+  s_4f2b7b3619bb33::t_cda261e429c54a 1-144
+ios/utils/ENRMSpoilerTapUtils.h
+  s_4f2b7b3619bb33::t_7f6b8af20142dc 1-25
+ios/utils/ENRMSpoilerTapUtils.m
+  s_4f2b7b3619bb33::t_aa1a9c157a0600 1-68
+ios/utils/ENRMTailFadeInAnimator.h
+  s_4f2b7b3619bb33::t_d7bbfa11c9933e 1-16
+ios/utils/ENRMTailFadeInAnimator.m
+  s_4f2b7b3619bb33::t_185bcdbf5798a9 1-161
+ios/utils/ENRMTextHitTest.h
+  s_4f2b7b3619bb33::t_07de6a279396d1 1-23
+ios/utils/ENRMTextHitTest.m
+  s_4f2b7b3619bb33::t_bda7a6ff40d76e 1-20
+ios/utils/ENRMTextInteractionUtils.h
+  s_4f2b7b3619bb33::t_61383f8e0f7661 1-20
+ios/utils/ENRMTextInteractionUtils.m
+  s_4f2b7b3619bb33::t_00dcf76ed7e46f 1-15
+ios/utils/ENRMTextRenderer.h
+  s_4f2b7b3619bb33::t_05ee8919b6ffbf 1-30
+ios/utils/ENRMTextRenderer.m
+  s_4f2b7b3619bb33::t_a4b982b95cd975 1-38
+ios/utils/ENRMTextViewSetup.h
+  s_4f2b7b3619bb33::t_bf5604a8f7bea6 1-96
+ios/utils/ENRMUIKit.h
+  s_4f2b7b3619bb33::t_288b6751718bfc 1-418
+ios/utils/EditMenuUtils+macOS.m
+  s_4f2b7b3619bb33::t_b311b83f36c6a6 1-59
+ios/utils/EditMenuUtils.h
+  s_4f2b7b3619bb33::t_8cd3d5001651af 1-105
+ios/utils/EditMenuUtils.m
+  s_4f2b7b3619bb33::t_695bcb1140109c 1-143
+ios/utils/FontScaleObserver.h
+  s_4f2b7b3619bb33::t_ca665dd1f78319 1-10
+ios/utils/FontScaleObserver.m
+  s_4f2b7b3619bb33::t_744b8d6604efe8 1-55
+ios/utils/FontUtils.h
+  s_4f2b7b3619bb33::t_97f17021d76545 1-30
+ios/utils/FontUtils.m
+  s_4f2b7b3619bb33::t_f87afe1ac154ba 1-47
+ios/utils/HTMLGenerator.h
+  s_4f2b7b3619bb33::t_a9e36fe8f17599 1-25
+ios/utils/HTMLGenerator.m
+  s_4f2b7b3619bb33::t_0dfce6e4ad5fe8 1-1019
+ios/utils/HeightUpdateUtils.h
+  s_4f2b7b3619bb33::t_2fc065f69b89ac 1-25
+ios/utils/ImageRequestHeaderUtils.h
+  s_4f2b7b3619bb33::t_d4e48a1389c97a 1-35
+ios/utils/LastElementUtils.h
+  s_4f2b7b3619bb33::t_a0d86855d2bdd3 1-91
+ios/utils/LinkTapUtils.h
+  s_4f2b7b3619bb33::t_2e45099670826d 1-24
+ios/utils/LinkTapUtils.m
+  s_4f2b7b3619bb33::t_8e77f930c5da59 1-32
+ios/utils/ListMarkerDrawer.h
+  s_4f2b7b3619bb33::t_77faa6919e4ccc 1-15
+ios/utils/ListMarkerDrawer.m
+  s_4f2b7b3619bb33::t_bdf63647f23318 1-199
+ios/utils/MarkdownASTSerializer.h
+  s_4f2b7b3619bb33::t_86e0fa2d06f66b 1-24
+ios/utils/MarkdownASTSerializer.m
+  s_4f2b7b3619bb33::t_c89348bbcd2b44 1-118
+ios/utils/MarkdownAccessibilityElementBuilder.h
+  s_4f2b7b3619bb33::t_4c2135a3ef7e1a 1-43
+ios/utils/MarkdownAccessibilityElementBuilder.m
+  s_4f2b7b3619bb33::t_062d1539bcd4bc 1-482
+ios/utils/MarkdownExtractor.h
+  s_4f2b7b3619bb33::t_d6ec4d57072a3c 1-17
+ios/utils/MarkdownExtractor.m
+  s_4f2b7b3619bb33::t_ed2aa4c32dd9d9 1-355
+ios/utils/ParagraphStyleUtils.h
+  s_4f2b7b3619bb33::t_2189a77a9c5e42 1-58
+ios/utils/ParagraphStyleUtils.m
+  s_4f2b7b3619bb33::t_86e8cf8885702f 1-428
+ios/utils/PasteboardUtils.h
+  s_4f2b7b3619bb33::t_708cdfbe186e7c 1-48
+ios/utils/PasteboardUtils.m
+  s_4f2b7b3619bb33::t_7c0e01d6ce11d8 1-162
+ios/utils/PillBackground.h
+  s_4f2b7b3619bb33::t_3a84b0f04b1558 1-23
+ios/utils/PillBackground.m
+  s_4f2b7b3619bb33::t_89a781b5261d6f 1-123
+ios/utils/RTFExportUtils.h
+  s_4f2b7b3619bb33::t_2e378ddf2eced9 1-24
+ios/utils/RTFExportUtils.m
+  s_4f2b7b3619bb33::t_558df6c8376cf8 1-297
+ios/utils/RenderedMarkdownSegment.h
+  s_4f2b7b3619bb33::t_09c1a6ac52ece8 1-61
+ios/utils/RenderedMarkdownSegment.m
+  s_4f2b7b3619bb33::t_321776128a1a6c 1-150
+ios/utils/RuntimeKeys.h
+  s_4f2b7b3619bb33::t_0b7fa762a00509 1-38
+ios/utils/RuntimeKeys.m
+  s_4f2b7b3619bb33::t_652b43bb1e3941 1-11
+ios/utils/SegmentReconciler.h
+  s_4f2b7b3619bb33::t_0ca9549d99e494 1-32
+ios/utils/SegmentReconciler.m
+  s_4f2b7b3619bb33::t_d7eec0bf71c401 1-118
+ios/utils/SegmentRenderer.h
+  s_4f2b7b3619bb33::t_1ecc37bf5fb0f6 1-24
+ios/utils/SegmentRenderer.m
+  s_4f2b7b3619bb33::t_02b919ebfac09f 1-101
+ios/utils/SegmentViewRegistry.h
+  s_4f2b7b3619bb33::t_41b71d3c56ae5d 1-36
+ios/utils/SegmentViewRegistry.m
+  s_4f2b7b3619bb33::t_40b63011df7937 1-67
+ios/utils/SelectionColorUtils.h
+  s_4f2b7b3619bb33::t_40068fade4aa23 1-14
+ios/utils/StreamingMarkdownFilter.h
+  s_4f2b7b3619bb33::t_e1dd8a68920e29 1-32
+ios/utils/StreamingMarkdownFilter.m
+  s_4f2b7b3619bb33::t_cb8bf96f7c7bd9 1-261
+ios/utils/StylePropsUtils.h
+  s_4f2b7b3619bb33::t_21bac3480890d3 1-1222
+ios/utils/TaskListTapUtils.h
+  s_4f2b7b3619bb33::t_278e7980b0917e 1-43
+ios/utils/TaskListTapUtils.m
+  s_4f2b7b3619bb33::t_c732eb2b359885 1-251
+ios/utils/TextViewLayoutManager.h
+  s_4f2b7b3619bb33::t_b640e4375fb522 1-14
+ios/utils/TextViewLayoutManager.mm
+  s_4f2b7b3619bb33::t_0b55c8697ab335 1-119
+ios/views/ENRMCodeBlockContainerView.h
+  s_4f2b7b3619bb33::t_868796f7439ebd 1-41
+ios/views/ENRMCodeBlockContainerView.m
+  s_4f2b7b3619bb33::t_79c2a4d59bee49 1-563
+ios/views/ENRMContextMenuTextView+macOS.h
+  s_4f2b7b3619bb33::t_f748e99a2212eb 1-17
+ios/views/ENRMContextMenuTextView+macOS.m
+  s_4f2b7b3619bb33::t_850b1c14a1899c 1-97
+ios/views/ENRMMathContainerView.h
+  s_4f2b7b3619bb33::t_ab112dd7994eda 1-36
+ios/views/ENRMMathContainerView.m
+  s_4f2b7b3619bb33::t_4a8c98f7750fdd 1-287
+ios/views/ENRMTableGridView.h
+  s_4f2b7b3619bb33::t_8c153a13033586 1-36
+ios/views/ENRMTableGridView.m
+  s_4f2b7b3619bb33::t_a28a6f05e76895 1-98
+ios/views/ENRMTableIOSGridView.h
+  s_4f2b7b3619bb33::t_c03795f01e6f17 1-40
+ios/views/ENRMTableIOSGridView.m
+  s_4f2b7b3619bb33::t_85826c037858f2 1-216
+ios/views/EnrichedMarkdownInternalText.h
+  s_4f2b7b3619bb33::t_e7c00c563ac498 1-44
+ios/views/EnrichedMarkdownInternalText.m
+  s_4f2b7b3619bb33::t_3659bf61bd2f68 1-163
+ios/views/TableContainerView.h
+  s_4f2b7b3619bb33::t_16a783e788d032 1-61
+ios/views/TableContainerView.m
+  s_4f2b7b3619bb33::t_2c3e5fa9d7a1a6 1-723
+jest.d.ts
+  s_4f2b7b3619bb33::t_4f874a44949ff0 1
+jest.js
+  s_4f2b7b3619bb33::t_2ed6378b37592b 1-5
+package.json
+  s_4f2b7b3619bb33::t_167aafbf05efbc 1-179
+react-native.config.js
+  s_4f2b7b3619bb33::t_90c47714964539 1-17
+vendor-ratex.mjs
+  s_4f2b7b3619bb33::t_9ee687459f7a0b 1-173
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "390117490fb4b8abd8e350fd6e86e77781859fc0",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
