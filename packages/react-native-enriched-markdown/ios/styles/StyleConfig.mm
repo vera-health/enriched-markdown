@@ -19,6 +19,20 @@ static inline NSString *normalizedFontWeight(NSString *fontWeight)
 }
 
 @implementation LinkVariantConfig
+
+- (instancetype)init
+{
+  if (self = [super init]) {
+    _fontScale = 1.0;
+  }
+  return self;
+}
+
+- (BOOL)hasPillGeometry
+{
+  return _borderWidth > 0 || _borderRadius > 0 || _paddingHorizontal > 0 || _paddingVertical > 0;
+}
+
 @end
 
 @interface LinkVariantRegexEntry : NSObject

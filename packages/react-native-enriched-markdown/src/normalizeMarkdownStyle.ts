@@ -336,6 +336,14 @@ export const normalizeMarkdownStyle = (
         backgroundColor: (override.backgroundColor
           ? (normalizeColor(override.backgroundColor) ?? transparent)
           : transparent) as string,
+        borderColor: (override.borderColor
+          ? (normalizeColor(override.borderColor) ?? transparent)
+          : transparent) as string,
+        borderWidth: override.borderWidth ?? 0,
+        borderRadius: override.borderRadius ?? 0,
+        paddingHorizontal: override.paddingHorizontal ?? 0,
+        paddingVertical: override.paddingVertical ?? 0,
+        fontScale: override.fontScale ?? 1,
       };
     }
   );

@@ -91,6 +91,11 @@ static NSMutableAttributedString *ENRMTableRenderCellNode(MarkdownASTNode *cellN
 
   [context applyLinkAttributesToString:attributedText];
 
+  // Cells draw via NSStringDrawing, which paints NSLink ranges in the system
+  // link color over the variant's foreground color. The grid hit-tests the
+  // custom linkURL attribute, so NSLink is dead weight here.
+  [attributedText removeAttribute:NSLinkAttributeName range:NSMakeRange(0, attributedText.length)];
+
   ENRMApplyWritingDirectionMode(attributedText, writingDirectionMode, resolvedLayoutDirection);
 
   if (alignment != NSTextAlignmentLeft && attributedText.length > 0) {
@@ -264,7 +269,8 @@ static void ENRMTableComputeLayout(NSArray<NSArray<TableCellData *> *> *rows, NS
   // a single drawRect: pass (no subview / layer compositing issues).
   ENRMTableGridView *gridView = [[ENRMTableGridView alloc] initWithFrame:CGRectZero];
   __weak TableContainerView *weakSelf = self;
-  gridView.menuProvider = ^NSMenu * {
+  gridView.menuProvider = ^NSMenu *
+  {
     TableContainerView *strongSelf = weakSelf;
     if (!strongSelf)
       return nil;

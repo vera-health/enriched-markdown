@@ -1,8 +1,13 @@
 #import "ENRMTableIOSGridView.h"
+#import "PillBackground.h"
 
 #if !TARGET_OS_OSX
 
 @implementation ENRMTableIOSRowData
+@end
+
+@interface ENRMTableIOSGridView (PillBackgrounds)
++ (void)drawPillBackgroundsForText:(NSAttributedString *)text inRect:(CGRect)textRect;
 @end
 
 @implementation ENRMTableIOSGridView {
@@ -97,6 +102,10 @@
       if (text.length > 0) {
         CGRect textRect = CGRectMake(xOffset + _horizontalCellPadding, yOffset + _verticalCellPadding,
                                      columnWidth - _horizontalCellPadding * 2, rowHeight - _verticalCellPadding * 2);
+        // NSStringDrawing never runs the layout manager's custom background
+        // passes, so chips in cells would render as plain links. Lay the cell
+        // out once and draw the pills under the text.
+        [ENRMTableIOSGridView drawPillBackgroundsForText:text inRect:textRect];
         [text drawWithRect:textRect
                    options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                    context:nil];
@@ -106,6 +115,41 @@
     }
     yOffset += rowHeight;
   }
+}
+
++ (void)drawPillBackgroundsForText:(NSAttributedString *)text inRect:(CGRect)textRect
+{
+  if (text.length == 0)
+    return;
+  __block BOOL hasPill = NO;
+  [text enumerateAttribute:ENRMPillAttributeName
+                   inRange:NSMakeRange(0, text.length)
+                   options:0
+                usingBlock:^(id value, NSRange range, BOOL *stop) {
+                  if (value) {
+                    hasPill = YES;
+                    *stop = YES;
+                  }
+                }];
+  if (!hasPill)
+    return;
+
+  NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:text];
+  NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
+  NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize:textRect.size];
+  textContainer.lineFragmentPadding = 0;
+  [layoutManager addTextContainer:textContainer];
+  [textStorage addLayoutManager:layoutManager];
+  [layoutManager ensureLayoutForTextContainer:textContainer];
+
+  static ENRMPillBackground *pillBg = nil;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{ pillBg = [[ENRMPillBackground alloc] init]; });
+  NSRange glyphs = [layoutManager glyphRangeForTextContainer:textContainer];
+  [pillBg drawBackgroundsForGlyphRange:glyphs
+                         layoutManager:layoutManager
+                         textContainer:textContainer
+                               atPoint:textRect.origin];
 }
 
 #pragma mark - Link hit-testing

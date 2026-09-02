@@ -285,6 +285,12 @@ export const normalizeMarkdownStyle = (
         color: override.color ?? linkBase.color,
         underline: override.underline ?? linkBase.underline,
         backgroundColor: override.backgroundColor ?? 'transparent',
+        borderColor: override.borderColor ?? 'transparent',
+        borderWidth: override.borderWidth ?? 0,
+        borderRadius: override.borderRadius ?? 0,
+        paddingHorizontal: override.paddingHorizontal ?? 0,
+        paddingVertical: override.paddingVertical ?? 0,
+        fontScale: override.fontScale ?? 1,
       };
     }
   );

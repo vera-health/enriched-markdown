@@ -3,6 +3,7 @@
 #import "CodeBackground.h"
 #import "CodeBlockBackground.h"
 #import "ListMarkerDrawer.h"
+#import "PillBackground.h"
 #import "RuntimeKeys.h"
 #import "StyleConfig.h"
 #import <objc/runtime.h>
@@ -31,14 +32,22 @@
   // We fetch the objects into local variables FIRST to ensure they don't
   // disappear mid-method if setConfig: is called on another thread.
 
+  // The blockquote region is a container background: it must go down first or
+  // its fill paints over inline pills and code washes on quoted lines —
+  // Android encodes the same rule with SPAN_FLAGS_CONTAINER_BACKGROUND.
+  BlockquoteBorder *quoteBorder = [self getBlockquoteBorderWithConfig:config];
+  [quoteBorder drawBordersForGlyphRange:glyphsToShow layoutManager:self textContainer:textContainer atPoint:origin];
+
   CodeBackground *codeBg = [self getCodeBackgroundWithConfig:config];
   [codeBg drawBackgroundsForGlyphRange:glyphsToShow layoutManager:self textContainer:textContainer atPoint:origin];
 
+  static ENRMPillBackground *pillBg = nil;
+  static dispatch_once_t pillOnce;
+  dispatch_once(&pillOnce, ^{ pillBg = [[ENRMPillBackground alloc] init]; });
+  [pillBg drawBackgroundsForGlyphRange:glyphsToShow layoutManager:self textContainer:textContainer atPoint:origin];
+
   CodeBlockBackground *codeBlockBg = [self getCodeBlockBackgroundWithConfig:config];
   [codeBlockBg drawBackgroundsForGlyphRange:glyphsToShow layoutManager:self textContainer:textContainer atPoint:origin];
-
-  BlockquoteBorder *quoteBorder = [self getBlockquoteBorderWithConfig:config];
-  [quoteBorder drawBordersForGlyphRange:glyphsToShow layoutManager:self textContainer:textContainer atPoint:origin];
 
   ListMarkerDrawer *markerDrawer = [self getListMarkerDrawerWithConfig:config];
   [markerDrawer drawMarkersForGlyphRange:glyphsToShow layoutManager:self textContainer:textContainer atPoint:origin];

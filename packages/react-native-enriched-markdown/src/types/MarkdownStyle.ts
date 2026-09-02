@@ -95,6 +95,21 @@ export interface LinkVariantStyle {
   color?: string;
   underline?: boolean;
   backgroundColor?: string;
+  /**
+   * Chip geometry. When any of these is set the variant renders as an inline
+   * pill: a rounded, optionally bordered background sized to the text's cap
+   * height rather than a plain full-line background highlight. All default to
+   * 0 (off), so a variant that sets only colors renders exactly as before.
+   */
+  borderColor?: string;
+  borderWidth?: number;
+  /** Clamped to half the pill height, so any large value yields a capsule. */
+  borderRadius?: number;
+  paddingHorizontal?: number;
+  paddingVertical?: number;
+  /** Label size relative to the surrounding text. 1 inherits. */
+  fontScale?: number;
+  /** Baseline shift relative to the font size; positive lifts the label. */
 }
 
 interface StrongStyle {

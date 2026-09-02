@@ -95,6 +95,12 @@ export interface LinkVariantEntryInternal {
   color: string;
   underline: boolean;
   backgroundColor: string;
+  borderColor: string;
+  borderWidth: number;
+  borderRadius: number;
+  paddingHorizontal: number;
+  paddingVertical: number;
+  fontScale: number;
 }
 
 interface StrongStyleInternal {

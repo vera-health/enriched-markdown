@@ -43,9 +43,14 @@ class LinkSpan(
   override fun updateDrawState(textPaint: TextPaint) {
     super.updateDrawState(textPaint)
 
-    textPaint.textSize = blockStyle.fontSize
-
     val variant = styleCache.resolvedVariantForUrl(url)
+
+    // A pill label's size comes from its own scale span; resetting here would
+    // win or lose by span application order (list items copy spans and can
+    // reorder them), so the reset stays only for plain links.
+    if (variant?.hasPillGeometry != true) {
+      textPaint.textSize = blockStyle.fontSize
+    }
 
     val fontFamily = styleCache.linkFontFamily
     if (fontFamily.isNotEmpty()) {
@@ -58,9 +63,13 @@ class LinkSpan(
     textPaint.color = variant?.color ?: styleCache.linkColor
     textPaint.isUnderlineText = variant?.underline ?: styleCache.linkUnderline
 
-    val backgroundColor = variant?.backgroundColor ?: styleCache.linkBackgroundColor
-    if (Color.alpha(backgroundColor) > 0) {
-      textPaint.bgColor = backgroundColor
+    // A pill-geometry variant paints its own rounded background; the flat
+    // bgColor highlight underneath would draw square corners behind it.
+    if (variant?.hasPillGeometry != true) {
+      val backgroundColor = variant?.backgroundColor ?: styleCache.linkBackgroundColor
+      if (Color.alpha(backgroundColor) > 0) {
+        textPaint.bgColor = backgroundColor
+      }
     }
   }
 }

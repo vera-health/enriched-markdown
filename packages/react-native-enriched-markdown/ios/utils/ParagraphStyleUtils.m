@@ -2,6 +2,7 @@
 #import "ENRMFeatureFlags.h"
 #import "ENRMImageAttachment.h"
 #import "LastElementUtils.h"
+#import "PillBackground.h"
 #import <React/RCTI18nUtil.h>
 
 #if ENRICHED_MARKDOWN_MATH
@@ -370,6 +371,14 @@ void applyBaselineOffset(NSMutableAttributedString *output, NSRange range)
                      options:0
                   usingBlock:^(NSNumber *existingOffset, NSRange subrange, BOOL *stop) {
                     if (existingOffset != nil) {
+                      // A chip label's existing offset is its centering lift,
+                      // not a superscript: it must ride up with the paragraph
+                      // like the pads and the pill do, so compose the two.
+                      if ([output attribute:ENRMPillAttributeName atIndex:subrange.location effectiveRange:NULL]) {
+                        [output addAttribute:NSBaselineOffsetAttributeName
+                                       value:@(existingOffset.doubleValue + baseLineOffset)
+                                       range:subrange];
+                      }
                       return;
                     }
                     [output enumerateAttribute:NSAttachmentAttributeName

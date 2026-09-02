@@ -13,6 +13,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) RCTUIColor *color;
 @property (nonatomic, assign) BOOL underline;
 @property (nonatomic, strong, nullable) RCTUIColor *backgroundColor;
+@property (nonatomic, strong, nullable) RCTUIColor *borderColor;
+@property (nonatomic, assign) CGFloat borderWidth;
+@property (nonatomic, assign) CGFloat borderRadius;
+@property (nonatomic, assign) CGFloat paddingHorizontal;
+@property (nonatomic, assign) CGFloat paddingVertical;
+@property (nonatomic, assign) CGFloat fontScale;
+// The pill pass replaces the plain background highlight only when geometry is
+// configured, so color-only variants render exactly as upstream.
+- (BOOL)hasPillGeometry;
 @end
 
 @interface StyleConfig : NSObject <NSCopying>
