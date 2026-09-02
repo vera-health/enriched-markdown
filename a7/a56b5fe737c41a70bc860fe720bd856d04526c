@@ -1,0 +1,19 @@
+android/src/main/java/com/swmansion/enriched/markdown/spans/PillBackgroundSpan.kt
+  s_4f2b7b3619bb33::t_fb39c61b656b53 95-105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "a7a56b5fe737c41a70bc860fe720bd856d04526c",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
