@@ -1,0 +1,33 @@
+android/src/main/java/com/swmansion/enriched/markdown/renderer/LinkRenderer.kt
+  s_4f2b7b3619bb33::t_59d65319ec9021 35-39,48-72
+android/src/main/java/com/swmansion/enriched/markdown/renderer/ListItemRenderer.kt
+  s_4f2b7b3619bb33::t_3477b1f132d2b4 13,113,119-121,127
+android/src/main/java/com/swmansion/enriched/markdown/spans/BaselineShiftSpan.kt
+  s_4f2b7b3619bb33::t_2a4817661c08a2 22-27,29-32
+android/src/main/java/com/swmansion/enriched/markdown/spans/LinkSpan.kt
+  s_4f2b7b3619bb33::t_f3847887f6d658 48-54
+ios/renderer/LinkRenderer.m
+  s_4f2b7b3619bb33::t_f7060d307176b0 10-30,102-116
+ios/utils/PillBackground.m
+  s_4f2b7b3619bb33::t_a4228b49db0929 61-67,87-92,94-99
+ios/utils/TextViewLayoutManager.mm
+  s_4f2b7b3619bb33::t_038dcdc6a99024 35-40
+ios/views/ENRMTableIOSGridView.m
+  s_4f2b7b3619bb33::t_a2f59122a31199 2,9-12,105-108,120-154
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "11f3be9af6f822bfb34296d6e38a198a20ccdb64",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
