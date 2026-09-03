@@ -1,0 +1,33 @@
+name: Publish vera fork to npm
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish (e.g. 1.0.2-vera.7)"
+        required: true
+
+# Publishes via npm Trusted Publishing (OIDC): no token, no 2FA bypass.
+# Link this workflow once at npmjs.com → @verahealth/react-native-enriched-markdown
+# → Settings → Trusted Publisher (repo vera-health/enriched-markdown,
+# workflow publish-vera-npm.yml).
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+
+      - run: corepack enable
+
+      - run: yarn install --immutable
+
+      - run: ./scripts/publish-vera-npm.sh "${{ inputs.version }}"
