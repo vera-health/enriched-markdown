@@ -13,7 +13,7 @@
 # Consumers depend on it through an npm alias so the on-disk folder stays
 # `react-native-enriched-markdown`:
 #
-#   "react-native-enriched-markdown": "npm:@vera-health/react-native-enriched-markdown@<version>"
+#   "react-native-enriched-markdown": "npm:@verahealth/react-native-enriched-markdown@<version>"
 #
 # Bun consumers must list BOTH names in trustedDependencies so postinstall
 # runs regardless of which name bun matches against.
@@ -22,7 +22,7 @@ set -euo pipefail
 VERSION="${1:?usage: $0 <version> [--dry-run] [scope]}"
 shift
 DRY_RUN=""
-SCOPE="@vera-health"
+SCOPE="@verahealth"
 for arg in "$@"; do
   case "$arg" in
     --dry-run) DRY_RUN="--dry-run" ;;
