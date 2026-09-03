@@ -1,0 +1,22 @@
+scripts/publish-vera-npm.sh
+  s_4f2b7b3619bb33::t_2da8d09714040c 1,3-6,12,16-17,20-34,51-53,57,60
+  s_4f2b7b3619bb33::t_047f4fe0b87463 7-8,10-11,13-15,35-36,43-50,61-63
+  s_4f2b7b3619bb33::t_57b61a045f6b37 2,9,18-19,37-42,54-56,58-59
+  s_4f2b7b3619bb33::t_a418f2fd380d34 64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "706e39a51c3398385a5627dec9f34821bda651a9",
+  "prompts": {},
+  "sessions": {
+    "s_4f2b7b3619bb33": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d7d40f8a-1da3-4dc2-8b17-80f7e2e744b0",
+        "model": "claude-fable-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
