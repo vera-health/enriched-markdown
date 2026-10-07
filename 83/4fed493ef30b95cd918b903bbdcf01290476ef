@@ -1,0 +1,19 @@
+packages/react-native-enriched-markdown/README.md
+  s_9daa389905d1a7::t_15e38919f9d94a 1-39,42-46,48,51,54,56,58,60,64
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "834fed493ef30b95cd918b903bbdcf01290476ef",
+  "prompts": {},
+  "sessions": {
+    "s_9daa389905d1a7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "cfbc3581-668e-4b39-915d-dadbdeddab1a",
+        "model": "claude-sonnet-5-5"
+      },
+      "human_author": "NTAP Kenan <kenanntap@gmail.com>"
+    }
+  }
+}
